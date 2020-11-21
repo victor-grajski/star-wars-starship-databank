@@ -33,7 +33,7 @@ export default function App() {
           contentContainerStyle={{
             flexGrow: 1,
             justifyContent: 'space-between',
-            alignItems: "flex-start"
+            alignItems: "center"
           }}
         >
           { starships.map((ship) => <StarshipListItem key={ship.name} ship={ship} /> )}
@@ -43,8 +43,11 @@ export default function App() {
           style={styles.container}
           contentContainerStyle={{
             flexGrow: 1,
-            justifyContent: 'space-between',
-            alignItems: "flex-start"
+            justifyContent: 'space-around',
+            alignItems: "center",
+            alignContent: "space-between",
+            flexDirection: "row",
+            flexWrap: "wrap"
           }}
         >
           { starships.map((ship) => <StarshipListItem key={ship.name} ship={ship} /> )}
@@ -56,7 +59,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#222',
   },
 });

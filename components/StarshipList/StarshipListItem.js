@@ -9,7 +9,6 @@ export default function StarshipListItem(props) {
   let { name, manufacturer, images } = ship;
   let image = Image.resolveAssetSource(images[0]);
   let styles = getStyles(orientation);
-  console.log(orientation)
 
   return (
     <TouchableOpacity style={[styles.brief, hover && {opacity:.8}]} 
@@ -18,8 +17,8 @@ export default function StarshipListItem(props) {
       onPress={()=>{}}
     > 
       <Image source={image} style={styles.image}/> 
-      <Text style={styles.text}>{name}</Text>
-      <Text style={styles.text}>{manufacturer}</Text>
+      <Text style={styles.title} numberOfLines={1} ellipsizeMode='tail'>{name}</Text>
+      <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>{manufacturer}</Text>
     </TouchableOpacity>
   )
 };
@@ -30,54 +29,86 @@ const getStyles = (orientation) => {
       brief: {
         backgroundColor: '#333333',
         alignItems: "center",
-        padding: 10,
         margin: 10,
         borderRadius: 10,
-        height: 270,
+        height: 250,
     
         flex: 1,
         minWidth: 200,
-        maxWidth: 300,
-        maxHeight: 300
+        maxWidth: 335,
+        maxHeight: 250
       },
       image: {
-        width: 200,
-        height: 200,
-        borderRadius: 100,
+        width: 335,
+        height: 187.5,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
       },
-      text: {
-        fontSize: 28,
+      title: {
+        paddingTop: 10,
+        paddingLeft: 10,
+        fontSize: 18,
         color: '#ffffff',
-        padding: 12,
-        paddingBottom: 2
-      }
+        alignSelf: "flex-start",
+        textTransform: "uppercase",
+        fontFamily: "Helvetica Neue",
+        maxHeight: 40,
+        width: 315
+      },
+      subtitle: {
+        paddingTop: 3,
+        paddingLeft: 10,
+        fontSize: 14,
+        color: '#1BBCEA',
+        alignSelf: "flex-start",
+        textTransform: "uppercase",
+        fontFamily: "Helvetica Neue",
+        maxHeight: 30,
+        width: 315
+      },
     });
   } else {
     return StyleSheet.create({
       brief: {
-        backgroundColor: '#bbb',
+        backgroundColor: '#333333',
         alignItems: "center",
-        padding: 10,
-        margin: 10,
+        marginBottom: 20,
         borderRadius: 10,
-        height: 270,
     
         flex: 1,
-        minWidth: 200,
-        maxWidth: 300,
-        maxHeight: 300
+        minWidth: 335,
+        minHeight: 250,
+        maxWidth: 335,
+        maxHeight: 250
       },
       image: {
-        width: 200,
-        height: 200,
-        borderRadius: 100,
+        width: 335,
+        height: 187.5,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
       },
-      text: {
-        fontSize: 28,
+      title: {
+        paddingTop: 10,
+        paddingLeft: 10,
+        fontSize: 18,
         color: '#ffffff',
-        padding: 12,
-        paddingBottom: 2
-      }
+        alignSelf: "flex-start",
+        textTransform: "uppercase",
+        fontFamily: "Helvetica Neue",
+        maxHeight: 40,
+        width: 315
+      },
+      subtitle: {
+        paddingTop: 3,
+        paddingLeft: 10,
+        fontSize: 14,
+        color: '#1BBCEA',
+        alignSelf: "flex-start",
+        textTransform: "uppercase",
+        fontFamily: "Helvetica Neue",
+        maxHeight: 30,
+        width: 315
+      },
     });
   }
 } 
