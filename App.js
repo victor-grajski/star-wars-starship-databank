@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Dimensions, Text, View } from 'react-native';
 import Context from './Context';
+import { useOrientation } from './utils/useOrientation';
 
 import starships from './data/starships';
 import pilots from './data/pilots';
@@ -17,22 +18,38 @@ export default function App() {
     favorites: [],
   });
 
+  const orientation = useOrientation();
+
   return (
     <Context.Provider
       value={{
         ...state,
+        orientation: orientation,
       }}
     >
-      <ScrollView 
-        style={styles.container}
-        contentContainerStyle={{
-          flexGrow: 1,
-          justifyContent: 'space-between',
-          alignItems: "flex-start"
-        }}
-      >
-        { starships.map((ship) => <StarshipListItem key={ship.name} ship={ship} /> )}
-      </ScrollView>
+      {orientation === 'PORTRAIT' ? (
+        <ScrollView 
+          style={styles.container}
+          contentContainerStyle={{
+            flexGrow: 1,
+            justifyContent: 'space-between',
+            alignItems: "flex-start"
+          }}
+        >
+          { starships.map((ship) => <StarshipListItem key={ship.name} ship={ship} /> )}
+        </ScrollView>
+      ) : (
+        <ScrollView 
+          style={styles.container}
+          contentContainerStyle={{
+            flexGrow: 1,
+            justifyContent: 'space-between',
+            alignItems: "flex-start"
+          }}
+        >
+          { starships.map((ship) => <StarshipListItem key={ship.name} ship={ship} /> )}
+        </ScrollView>
+      )}
     </Context.Provider>
   );
 }
