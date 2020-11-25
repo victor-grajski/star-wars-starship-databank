@@ -15,7 +15,7 @@ import films from './data/films';
 import HomeScreen from './components/HomeScreen/HomeScreen';
 import StarshipDetail from './components/StarshipDetail/StarshipDetail';
 
-// TODO: header button
+// TODO: header buttons
 export default function App() {
   const [state, setState] = useState({
     starships: starships,
@@ -32,8 +32,6 @@ export default function App() {
   const orientation = useOrientation();
   const Stack = createStackNavigator();
 
-  let styles = getStyles(orientation);
-
   if (!isLoaded) {
     return <AppLoading />;
   }
@@ -46,13 +44,20 @@ export default function App() {
         }}
       >
         {orientation === 'PORTRAIT' ? (
-          <Stack.Navigator
-            screenOptions={styles}
-          >
+          <Stack.Navigator>
             <Stack.Screen
               name="Home"
               component={HomeScreen}
               options={{
+                headerStyle: {
+                  backgroundColor: '#222',
+                  shadowColor: 'transparent'
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                  color: '#fff',
+                  fontWeight: 'bold',
+                },
                 headerTitle: props => <HeaderTitle {...props} />
               }}
             />
@@ -60,18 +65,31 @@ export default function App() {
               name="Detail" 
               component={StarshipDetail} 
               options={{
-                headerTitle: ""
+                headerTitle: "",
+                headerBackTitleVisible: false,
+                headerStyle: {
+                  shadowColor: 'transparent'
+                },
+                headerTintColor: '#fff',
+                headerTransparent: true,
               }}
             />
           </Stack.Navigator>
         ) : (
-          <Stack.Navigator
-          screenOptions={styles}
-          >
+          <Stack.Navigator>
             <Stack.Screen
               name="Home"
               component={HomeScreen}
               options={{
+                headerStyle: {
+                  backgroundColor: '#222',
+                  shadowColor: 'transparent'
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                  color: '#fff',
+                  fontWeight: 'bold',
+                },
                 headerTitle: props => <HeaderTitle {...props} />
               }}
             />
@@ -79,7 +97,13 @@ export default function App() {
               name="Detail" 
               component={StarshipDetail} 
               options={{
-                headerTitle: ""
+                headerTitle: "",
+                headerBackTitleVisible: false,
+                headerStyle: {
+                  shadowColor: 'transparent'
+                },
+                headerTintColor: '#fff',
+                headerTransparent: true,
               }}
             />
           </Stack.Navigator>
@@ -104,31 +128,3 @@ const HeaderTitle = () => {
     </Text>
   )
 }
-
-const getStyles = (orientation) => {
-  if (orientation === 'PORTRAIT') {
-    return {
-      headerStyle: {
-        backgroundColor: '#222',
-        shadowColor: 'transparent'
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        color: '#fff',
-        fontWeight: 'bold',
-      },
-    };
-  } else {
-    return {
-      headerStyle: {
-        backgroundColor: '#222',
-        shadowColor: 'transparent'
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        color: '#fff',
-        fontWeight: 'bold',
-      },
-    };
-  }
-} 
