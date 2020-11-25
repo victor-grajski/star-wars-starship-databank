@@ -74,7 +74,7 @@ const getStyles = (orientation) => {
       brief: {
         backgroundColor: '#333333',
         alignItems: "center",
-        marginBottom: 20,
+        marginBottom: 55,
         borderRadius: 10,
     
         flex: 1,

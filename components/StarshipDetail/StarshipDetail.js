@@ -7,7 +7,7 @@ export default function StarshipDetail({ route }) {
     
     return (
         <View>
-            <Text>This is {ship.name}'s profile</Text>
+            <Text>This is {ship.name}'s meep</Text>
         </View>
     );
 };

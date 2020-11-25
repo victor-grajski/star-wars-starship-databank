@@ -3,10 +3,8 @@ import { ScrollView, StyleSheet } from 'react-native';
 import Context from '../../Context';
 import StarshipListItem from '../StarshipList/StarshipListItem';
 
-import starships from '../../data/starships';
-
 export default function HomeScreen() {
-  const { orientation } = useContext(Context);
+  const { orientation, starships } = useContext(Context);
   let styles = getStyles(orientation);
 
   return (
