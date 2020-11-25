@@ -1,11 +1,13 @@
 import React, {useContext, useState} from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Context from '../../Context';
 
-export default function StarshipListItem(props) {
+export default function StarshipListItem({ ship }) {
   const { orientation } = useContext(Context);
   const [hover,setHover] = useState(false);
-  let { ship } = props;
+  let navigation = useNavigation();
+  // let { ship, navigation } = props;
   let { name, manufacturer, images } = ship;
   let image = Image.resolveAssetSource(images[0]);
   let styles = getStyles(orientation);
@@ -14,7 +16,7 @@ export default function StarshipListItem(props) {
     <TouchableOpacity style={[styles.brief, hover && {opacity:.8}]} 
       onMouseEnter={(e) => setHover(true) }
       onMouseLeave={(e) => setHover(false) }
-      onPress={()=>{}}
+      onPress={() => navigation.navigate('Detail', { ship: ship })}
     > 
       <Image source={image} style={styles.image}/> 
       <Text style={styles.title} numberOfLines={1} ellipsizeMode='tail'>{name}</Text>
