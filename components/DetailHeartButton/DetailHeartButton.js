@@ -14,6 +14,7 @@ export default function DetailHeartButton({ ship }) {
                 <Icon
                     name="favorite-border"
                     color='#fff'
+                    style={{ paddingRight: 20 }}
                     onPress={() => {
                         addFavorite(ship);
                     }}
@@ -22,6 +23,7 @@ export default function DetailHeartButton({ ship }) {
                 <Icon
                     name="favorite"
                     color="#fff"
+                    style={{ paddingRight: 20 }}
                     onPress={() => {
                         removeFavorite(ship);
                     }}

@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Button, Text } from 'react-native';
+import { Button, Text, View } from 'react-native';
 import Context from './Context';
 import { useOrientation } from './utils/useOrientation';
 import Drawer from 'react-native-drawer';
+import Hamburger from 'react-native-animated-hamburger';
 
 import starships from './data/starships';
 import pilots from './data/pilots';
@@ -19,8 +20,9 @@ import StarshipDetail from './components/StarshipDetail/StarshipDetail';
 import FilterPanel from './components/FilterPanel/FilterPanel';
 import HeartButton from './components/HeartButton/HeartButton';
 
-// TODO: hamburger icon
-// TODO: hamburger animation
+// TODO: android heart icon when menu open
+// TODO: hamburger icon padding
+// TODO: hamburger animation timing
 // TODO: landscape grid
 export default function App() {
   const [state, setState] = useState({
@@ -30,7 +32,12 @@ export default function App() {
     title: 'All Films',
     favoritesToggle: false,
     favorites: [],
+    drawerActive: false
   });
+
+  useEffect(() => {
+    console.log(state.drawerActive);
+  })
 
   const [isLoaded] = useFonts({
     'Helvetica Neue': require('./assets/fonts/HelveticaNeue.ttf'),
@@ -41,11 +48,18 @@ export default function App() {
   const Stack = createStackNavigator();
 
   const closeControlPanel = () => {
-    _drawer.close()
+    _drawer.close();
+    // setDrawerActive(false);
   };
   
   const openControlPanel = () => {
     _drawer.open();
+    setState({
+      ...state,
+      drawerActive: !state.drawerActive
+    })
+    console.log("Asdf")
+    // setDrawerActive(!drawerActive);
   };
 
   const filterResults = id => {
@@ -128,6 +142,10 @@ export default function App() {
             tapToClose={true}
             openDrawerOffset={(viewport) => viewport.width - 300}
             captureGestures={true}
+            onCloseStart={() => setState({
+              ...state,
+              drawerActive: false
+            })}
           >
             <Stack.Navigator>
               <Stack.Screen
@@ -145,13 +163,17 @@ export default function App() {
                   },
                   headerTitle: props => <HeaderTitle {...props} />,
                   headerLeft: () => (
-                    <Button
-                      title="meep"
-                      color="#fff"
-                      onPress={() => {
-                        openControlPanel();
-                      }}
-                    />
+                    <View style={{ paddingLeft: 20 }}>
+                      <Hamburger
+                        type="spinCross" 
+                        active={state.drawerActive} 
+                        underlayColor="transparent"
+                        color="white"
+                        onPress={() => {
+                          openControlPanel();
+                        }}
+                      />
+                    </View>
                   ),
                   headerRight: () => (
                     <HeartButton/>
@@ -181,6 +203,10 @@ export default function App() {
             tapToClose={true}
             openDrawerOffset={(viewport) => viewport.width - 300}
             captureGestures={true}
+            onCloseStart={() => setState({
+              ...state,
+              drawerActive: false
+            })}
           >
             <Stack.Navigator>
               <Stack.Screen
@@ -198,13 +224,17 @@ export default function App() {
                   },
                   headerTitle: props => <HeaderTitle {...props} />,
                   headerLeft: () => (
-                    <Button
-                      title="meep"
-                      color="#fff"
-                      onPress={() => {
-                        openControlPanel();
-                      }}
-                    />
+                    <View style={{ paddingLeft: 20 }}>
+                      <Hamburger
+                        type="spinCross" 
+                        active={state.drawerActive} 
+                        underlayColor="transparent"
+                        color="white"
+                        onPress={() => {
+                          openControlPanel();
+                        }}
+                      />
+                    </View>
                   ),
                   headerRight: () => (
                     <HeartButton/>

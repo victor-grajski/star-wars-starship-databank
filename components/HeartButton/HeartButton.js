@@ -4,29 +4,41 @@ import { Icon } from 'react-native-elements';
 import Context from '../../Context';
 
 export default function HeartButton() {
-    const { favoritesToggle, toggleFavorites } = useContext(Context);
+    const { drawerActive, favoritesToggle, toggleFavorites } = useContext(Context);
     // const [hover, setHover] = useState(false);
     // let styles = getStyles(orientation);
-    
-    return (
-        <View>
-            {!favoritesToggle ? (
-                <Icon
+
+    const renderContent = () => {
+        if (!favoritesToggle) {
+            if (!drawerActive) {
+                return <Icon
                     name="favorite-border"
                     color='#fff'
                     onPress={() => {
                         toggleFavorites();
                     }}
                 />
-            ) : (
-                <Icon
+            } else {
+                return <></>
+            }
+        } else {
+            if (!drawerActive) {
+                return <Icon
                     name="favorite"
-                    color="#fff"
+                    color='#fff'
                     onPress={() => {
                         toggleFavorites();
                     }}
                 />
-            )}
+            } else {
+                return <></>
+            }
+        }
+    }
+    
+    return (
+        <View style={{ paddingRight: 20 }}>
+            {renderContent()}
         </View>
     );
 };
