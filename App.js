@@ -24,6 +24,7 @@ export default function App() {
     starships: starships,
     pilots: pilots,
     films: films,
+    title: 'All Films',
     favorites: [],
   });
 
@@ -44,9 +45,22 @@ export default function App() {
   };
 
   const filterResults = id => {
+    let title;
+    let filteredStarships;
+
+    if (id === 0) {
+      title = "All Films";
+      filteredStarships = starships;
+    } else {
+      let film = films.filter(film => film.id === id)[0];
+      title = film.title;
+      filteredStarships = starships.filter(ship => ship.films.includes(id));
+    }
+
     setState({
       ...state,
-      starships: starships.filter(ship => ship.films.includes(id))
+      starships: filteredStarships,
+      title: title
     })
     closeControlPanel();
   };

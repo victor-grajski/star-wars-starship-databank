@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 import Context from '../../Context';
 import StarshipListItem from '../StarshipList/StarshipListItem';
 
 export default function HomeScreen() {
-  const { orientation, starships } = useContext(Context);
+  const { orientation, starships, title } = useContext(Context);
   let styles = getStyles(orientation);
 
   return (
@@ -12,7 +12,9 @@ export default function HomeScreen() {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}
     >
-        { starships.map((ship) => <StarshipListItem key={ship.name} ship={ship} /> )}
+      <Text style={styles.film} numberOfLines={1} ellipsizeMode='tail'>{title}</Text>
+      
+      { starships.map((ship) => <StarshipListItem key={ship.name} ship={ship} /> )}
     </ScrollView>
   )
 };
@@ -27,6 +29,16 @@ const getStyles = (orientation) => {
         flexGrow: 1,
         justifyContent: 'space-between',
         alignItems: "center"
+      },
+      film: {
+        paddingTop: 50,
+        paddingLeft: 10,
+        fontSize: 24,
+        fontWeight: "500",
+        color: '#fff',
+        alignSelf: "flex-start",
+        textTransform: "uppercase",
+        fontFamily: "Helvetica Neue",
       },
     });
   } else {
