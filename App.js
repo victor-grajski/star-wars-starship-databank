@@ -4,9 +4,10 @@ import { AppLoading } from 'expo';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Text } from 'react-native';
+import { Button, Text } from 'react-native';
 import Context from './Context';
 import { useOrientation } from './utils/useOrientation';
+import Drawer from 'react-native-drawer';
 
 import starships from './data/starships';
 import pilots from './data/pilots';
@@ -14,6 +15,7 @@ import films from './data/films';
 
 import HomeScreen from './components/HomeScreen/HomeScreen';
 import StarshipDetail from './components/StarshipDetail/StarshipDetail';
+import FilterPanel from './components/FilterPanel/FilterPanel';
 
 // TODO: header buttons
 export default function App() {
@@ -32,6 +34,15 @@ export default function App() {
   const orientation = useOrientation();
   const Stack = createStackNavigator();
 
+  const closeControlPanel = () => {
+    _drawer.close()
+  };
+  
+  const openControlPanel = () => {
+    _drawer.open();
+  };
+
+
   if (!isLoaded) {
     return <AppLoading />;
   }
@@ -44,69 +55,104 @@ export default function App() {
         }}
       >
         {orientation === 'PORTRAIT' ? (
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Home"
-              component={HomeScreen}
-              options={{
-                headerStyle: {
-                  backgroundColor: '#222',
-                  shadowColor: 'transparent'
-                },
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                  color: '#fff',
-                  fontWeight: 'bold',
-                },
-                headerTitle: props => <HeaderTitle {...props} />
-              }}
-            />
-            <Stack.Screen 
-              name="Detail" 
-              component={StarshipDetail} 
-              options={{
-                headerTitle: "",
-                headerBackTitleVisible: false,
-                headerStyle: {
-                  shadowColor: 'transparent'
-                },
-                headerTintColor: '#fff',
-                headerTransparent: true,
-              }}
-            />
-          </Stack.Navigator>
+          <Drawer
+            ref={(ref) => _drawer = ref}
+            content={<FilterPanel />}
+            tapToClose={true}
+            openDrawerOffset={(viewport) => viewport.width - 300}
+            captureGestures={true}
+          >
+            <Stack.Navigator>
+              <Stack.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{
+                  headerStyle: {
+                    backgroundColor: '#222',
+                    shadowColor: 'transparent'
+                  },
+                  headerTintColor: '#fff',
+                  headerTitleStyle: {
+                    color: '#fff',
+                    fontWeight: 'bold',
+                  },
+                  headerTitle: props => <HeaderTitle {...props} />,
+                  headerLeft: () => (
+                    <Button
+                      title="meep"
+                      color="#fff"
+                      onPress={() => {
+                        openControlPanel();
+                      }}
+                    />
+                  )
+                }}
+              />
+              
+              <Stack.Screen 
+                name="Detail" 
+                component={StarshipDetail} 
+                options={{
+                  headerTitle: "",
+                  headerBackTitleVisible: false,
+                  headerStyle: {
+                    shadowColor: 'transparent'
+                  },
+                  headerTintColor: '#fff',
+                  headerTransparent: true,
+                }}
+              />
+            </Stack.Navigator>
+          </Drawer>
         ) : (
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Home"
-              component={HomeScreen}
-              options={{
-                headerStyle: {
-                  backgroundColor: '#222',
-                  shadowColor: 'transparent'
-                },
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                  color: '#fff',
-                  fontWeight: 'bold',
-                },
-                headerTitle: props => <HeaderTitle {...props} />
-              }}
-            />
-            <Stack.Screen 
-              name="Detail" 
-              component={StarshipDetail} 
-              options={{
-                headerTitle: "",
-                headerBackTitleVisible: false,
-                headerStyle: {
-                  shadowColor: 'transparent'
-                },
-                headerTintColor: '#fff',
-                headerTransparent: true,
-              }}
-            />
-          </Stack.Navigator>
+          <Drawer
+            ref={(ref) => _drawer = ref}
+            content={<FilterPanel />}
+            tapToClose={true}
+            openDrawerOffset={(viewport) => viewport.width - 300}
+            captureGestures={true}
+          >
+            <Stack.Navigator>
+              <Stack.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{
+                  headerStyle: {
+                    backgroundColor: '#222',
+                    shadowColor: 'transparent'
+                  },
+                  headerTintColor: '#fff',
+                  headerTitleStyle: {
+                    color: '#fff',
+                    fontWeight: 'bold',
+                  },
+                  headerTitle: props => <HeaderTitle {...props} />,
+                  headerLeft: () => (
+                    <Button
+                      title="meep"
+                      color="#fff"
+                      onPress={() => {
+                        openControlPanel();
+                      }}
+                    />
+                  )
+                }}
+              />
+              <Stack.Screen 
+                name="Detail" 
+                component={StarshipDetail} 
+                options={{
+                  headerTitle: "",
+                  headerBackTitleVisible: false,
+                  headerStyle: {
+                    shadowColor: 'transparent'
+                  },
+                  headerTintColor: '#fff',
+                  headerTransparent: true,
+                }}
+              />
+            </Stack.Navigator>
+          </Drawer>
         )}
       </Context.Provider>
     </NavigationContainer>
