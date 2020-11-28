@@ -2,12 +2,22 @@ import React, { useContext } from 'react';
 import { View, Text, Button, StyleSheet, Image } from 'react-native';
 import Context from '../../Context';
 
-export default function StarshipDetail({ route }) {
+import DetailHeartButton from '../DetailHeartButton/DetailHeartButton';
+
+export default function StarshipDetail({ route, navigation }) {
     const { orientation } = useContext(Context);
     let ship = route.params.ship;
     let { name, manufacturer, images } = ship;
     let image = Image.resolveAssetSource(images[0]);
     let styles = getStyles(orientation);
+
+    React.useLayoutEffect(() => {
+      navigation.setOptions({
+        headerRight: () => (
+          <DetailHeartButton ship={ship} />
+        ),
+      });
+    }, [navigation]);
     
     return (
         <View
@@ -63,20 +73,13 @@ const getStyles = (orientation) => {
         container: {
           backgroundColor: '#333333',
           alignItems: "center",
-          marginBottom: 55,
-          borderRadius: 10,
-      
           flex: 1,
-          minWidth: 335,
-          minHeight: 250,
-          maxWidth: 335,
-          maxHeight: 250
+          height: '100%',
+          width: '100%'
         },
         image: {
-          width: 335,
-          height: 187.5,
-          borderTopLeftRadius: 10,
-          borderTopRightRadius: 10
+          width: '100%',
+          height: 300
         },
         title: {
           paddingTop: 10,

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
 import 'react-native-gesture-handler';
@@ -16,15 +17,19 @@ import films from './data/films';
 import HomeScreen from './components/HomeScreen/HomeScreen';
 import StarshipDetail from './components/StarshipDetail/StarshipDetail';
 import FilterPanel from './components/FilterPanel/FilterPanel';
+import HeartButton from './components/HeartButton/HeartButton';
 
-// TODO: header buttons
-// TODO: status title
+// TODO: hamburger icon
+// TODO: hamburger animation
+// TODO: heart button
+// TODO: landscape grid
 export default function App() {
   const [state, setState] = useState({
     starships: starships,
     pilots: pilots,
     films: films,
     title: 'All Films',
+    favoritesToggle: false,
     favorites: [],
   });
 
@@ -65,17 +70,56 @@ export default function App() {
     closeControlPanel();
   };
 
+  const toggleFavorites = () => {
+    if (!state.favoritesToggle) {
+      setState({
+        ...state,
+        title: "Favorites",
+        favoritesToggle: true,
+        starships: state.favorites
+      })
+    } else {
+      setState({
+        ...state,
+        title: "All Films",
+        favoritesToggle: false,
+        starships: starships
+      })
+    }
+  }
+
+  const addFavorite = ship => {
+    state.favorites.push(ship);
+    setState({
+      ...state,
+      favorites: state.favorites
+    })
+  };
+
+  const removeFavorite = ship => {
+    let index = state.favorites.indexOf(ship)
+    state.favorites.splice(index, 1);
+    setState({
+      ...state,
+      favorites: state.favorites
+    })
+  };
+
 
   if (!isLoaded) {
     return <AppLoading />;
   }
   return (
     <NavigationContainer>
+      <StatusBar style="light" />
       <Context.Provider
         value={{
           ...state,
           orientation: orientation,
           filterResults: filterResults,
+          toggleFavorites: toggleFavorites,
+          addFavorite: addFavorite,
+          removeFavorite: removeFavorite,
         }}
       >
         {orientation === 'PORTRAIT' ? (
@@ -109,7 +153,10 @@ export default function App() {
                         openControlPanel();
                       }}
                     />
-                  )
+                  ),
+                  headerRight: () => (
+                    <HeartButton/>
+                  ),
                 }}
               />
               
@@ -159,7 +206,10 @@ export default function App() {
                         openControlPanel();
                       }}
                     />
-                  )
+                  ),
+                  headerRight: () => (
+                    <HeartButton/>
+                  ),
                 }}
               />
               <Stack.Screen 
