@@ -21,7 +21,6 @@ import HeartButton from './components/HeartButton/HeartButton';
 
 // TODO: hamburger icon
 // TODO: hamburger animation
-// TODO: heart button
 // TODO: landscape grid
 export default function App() {
   const [state, setState] = useState({

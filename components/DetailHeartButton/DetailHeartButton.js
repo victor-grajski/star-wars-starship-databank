@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { View, Text, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Icon } from 'react-native-elements';
 import Context from '../../Context';
 
 export default function DetailHeartButton({ ship }) {
@@ -10,16 +11,16 @@ export default function DetailHeartButton({ ship }) {
     return (
         <View>
             {!favorites.includes(ship) ? (
-                <Button
-                    title="outlined heart"
-                    color="#fff"
+                <Icon
+                    name="favorite-border"
+                    color='#fff'
                     onPress={() => {
                         addFavorite(ship);
                     }}
                 />
             ) : (
-                <Button
-                    title="full heart"
+                <Icon
+                    name="favorite"
                     color="#fff"
                     onPress={() => {
                         removeFavorite(ship);

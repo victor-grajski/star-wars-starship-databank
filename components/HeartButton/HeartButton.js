@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { View, Text, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Icon } from 'react-native-elements';
 import Context from '../../Context';
 
 export default function HeartButton() {
@@ -10,21 +11,21 @@ export default function HeartButton() {
     return (
         <View>
             {!favoritesToggle ? (
-                <Button
-                        title="outlined heart"
-                        color="#fff"
-                        onPress={() => {
-                            toggleFavorites();
-                        }}
-                        />
+                <Icon
+                    name="favorite-border"
+                    color='#fff'
+                    onPress={() => {
+                        toggleFavorites();
+                    }}
+                />
             ) : (
-                <Button
-                        title="full heart"
-                        color="#fff"
-                        onPress={() => {
-                            toggleFavorites();
-                        }}
-                        />
+                <Icon
+                    name="favorite"
+                    color="#fff"
+                    onPress={() => {
+                        toggleFavorites();
+                    }}
+                />
             )}
         </View>
     );
