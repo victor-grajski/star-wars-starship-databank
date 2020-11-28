@@ -11,6 +11,7 @@ import yWing from '../assets/images/starships/y-wing.jpeg';
 
 const starships = [
     {
+        "id": 2,
         "name": "CR90 corvette",
         "model": "CR90 corvette",
         "manufacturer": "Corellian Engineering Corporation",
@@ -26,9 +27,7 @@ const starships = [
         "starship_class": "corvette",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/1/",
-            "http://swapi.dev/api/films/3/",
-            "http://swapi.dev/api/films/6/"
+            1,3,6
         ],
         "created": "2014-12-10T14:20:33.369000Z",
         "edited": "2014-12-20T21:23:49.867000Z",
@@ -38,6 +37,7 @@ const starships = [
         ]
     },
     {
+        "id": 3,
         "name": "Star Destroyer",
         "model": "Imperial I-class Star Destroyer",
         "manufacturer": "Kuat Drive Yards",
@@ -53,9 +53,7 @@ const starships = [
         "starship_class": "Star Destroyer",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/1/",
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            1,2,3
         ],
         "created": "2014-12-10T15:08:19.848000Z",
         "edited": "2014-12-20T21:23:49.870000Z",
@@ -65,6 +63,7 @@ const starships = [
         ]
     },
     {
+        "id": 5,
         "name": "Sentinel-class landing craft",
         "model": "Sentinel-class landing craft",
         "manufacturer": "Sienar Fleet Systems, Cyngus Spaceworks",
@@ -80,7 +79,7 @@ const starships = [
         "starship_class": "landing craft",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/1/"
+            1
         ],
         "created": "2014-12-10T15:48:00.586000Z",
         "edited": "2014-12-20T21:23:49.873000Z",
@@ -90,6 +89,7 @@ const starships = [
         ]
     },
     {
+        "id": 9,
         "name": "Death Star",
         "model": "DS-1 Orbital Battle Station",
         "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
@@ -105,7 +105,7 @@ const starships = [
         "starship_class": "Deep Space Mobile Battlestation",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/1/"
+            1
         ],
         "created": "2014-12-10T16:36:50.509000Z",
         "edited": "2014-12-20T21:26:24.783000Z",
@@ -115,6 +115,7 @@ const starships = [
         ]
     },
     {
+        "id": 10,
         "name": "Millennium Falcon",
         "model": "YT-1300 light freighter",
         "manufacturer": "Corellian Engineering Corporation",
@@ -135,9 +136,7 @@ const starships = [
             "http://swapi.dev/api/people/31/"
         ],
         "films": [
-            "http://swapi.dev/api/films/1/",
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            1,2,3
         ],
         "created": "2014-12-10T16:59:45.094000Z",
         "edited": "2014-12-20T21:23:49.880000Z",
@@ -147,6 +146,7 @@ const starships = [
         ]
     },
     {
+        "id": 11,
         "name": "Y-wing",
         "model": "BTL Y-wing",
         "manufacturer": "Koensayr Manufacturing",
@@ -162,9 +162,7 @@ const starships = [
         "starship_class": "assault starfighter",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/1/",
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            1,2,3
         ],
         "created": "2014-12-12T11:00:39.817000Z",
         "edited": "2014-12-20T21:23:49.883000Z",
@@ -174,6 +172,7 @@ const starships = [
         ]
     },
     {
+        "id": 12,
         "name": "X-wing",
         "model": "T-65 X-wing",
         "manufacturer": "Incom Corporation",
@@ -194,9 +193,7 @@ const starships = [
             "http://swapi.dev/api/people/19/"
         ],
         "films": [
-            "http://swapi.dev/api/films/1/",
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            1,2,3
         ],
         "created": "2014-12-12T11:19:05.340000Z",
         "edited": "2014-12-20T21:23:49.886000Z",
@@ -206,6 +203,7 @@ const starships = [
         ]
     },
     {
+        "id": 13,
         "name": "TIE Advanced x1",
         "model": "Twin Ion Engine Advanced x1",
         "manufacturer": "Sienar Fleet Systems",
@@ -223,7 +221,7 @@ const starships = [
             "http://swapi.dev/api/people/4/"
         ],
         "films": [
-            "http://swapi.dev/api/films/1/"
+            1
         ],
         "created": "2014-12-12T11:21:32.991000Z",
         "edited": "2014-12-20T21:23:49.889000Z",
@@ -233,6 +231,7 @@ const starships = [
         ]
     },
     {
+        "id": 15,
         "name": "Executor",
         "model": "Executor-class star dreadnought",
         "manufacturer": "Kuat Drive Yards, Fondor Shipyards",
@@ -248,8 +247,7 @@ const starships = [
         "starship_class": "Star dreadnought",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            2,3
         ],
         "created": "2014-12-15T12:31:42.547000Z",
         "edited": "2014-12-20T21:23:49.893000Z",
@@ -259,6 +257,7 @@ const starships = [
         ]
     },
     {
+        "id": 17,
         "name": "Rebel transport",
         "model": "GR-75 medium transport",
         "manufacturer": "Gallofree Yards, Inc.",
@@ -274,8 +273,7 @@ const starships = [
         "starship_class": "Medium transport",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            2,3
         ],
         "created": "2014-12-15T12:34:52.264000Z",
         "edited": "2014-12-20T21:23:49.895000Z",
@@ -285,6 +283,7 @@ const starships = [
         ]
     },
     {
+        "id": 21,
         "name": "Slave 1",
         "model": "Firespray-31-class patrol and attack",
         "manufacturer": "Kuat Systems Engineering",
@@ -302,8 +301,7 @@ const starships = [
             "http://swapi.dev/api/people/22/"
         ],
         "films": [
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/5/"
+            2,5
         ],
         "created": "2014-12-15T13:00:56.332000Z",
         "edited": "2014-12-20T21:23:49.897000Z",
@@ -313,6 +311,7 @@ const starships = [
         ]
     },
     {
+        "id": 22,
         "name": "Imperial shuttle",
         "model": "Lambda-class T-4a shuttle",
         "manufacturer": "Sienar Fleet Systems",
@@ -332,8 +331,7 @@ const starships = [
             "http://swapi.dev/api/people/14/"
         ],
         "films": [
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            2,3
         ],
         "created": "2014-12-15T13:04:47.235000Z",
         "edited": "2014-12-20T21:23:49.900000Z",
@@ -343,6 +341,7 @@ const starships = [
         ]
     },
     {
+        "id": 23,
         "name": "EF76 Nebulon-B escort frigate",
         "model": "EF76 Nebulon-B escort frigate",
         "manufacturer": "Kuat Drive Yards",
@@ -358,8 +357,7 @@ const starships = [
         "starship_class": "Escort ship",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/2/",
-            "http://swapi.dev/api/films/3/"
+            2,3
         ],
         "created": "2014-12-15T13:06:30.813000Z",
         "edited": "2014-12-20T21:23:49.902000Z",
@@ -369,6 +367,7 @@ const starships = [
         ]
     },
     {
+        "id": 27,
         "name": "Calamari Cruiser",
         "model": "MC80 Liberty type Star Cruiser",
         "manufacturer": "Mon Calamari shipyards",
@@ -384,7 +383,7 @@ const starships = [
         "starship_class": "Star Cruiser",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/3/"
+            3
         ],
         "created": "2014-12-18T10:54:57.804000Z",
         "edited": "2014-12-20T21:23:49.904000Z",
@@ -394,6 +393,7 @@ const starships = [
         ]
     },
     {
+        "id": 28,
         "name": "A-wing",
         "model": "RZ-1 A-wing Interceptor",
         "manufacturer": "Alliance Underground Engineering, Incom Corporation",
@@ -411,7 +411,7 @@ const starships = [
             "http://swapi.dev/api/people/29/"
         ],
         "films": [
-            "http://swapi.dev/api/films/3/"
+            3
         ],
         "created": "2014-12-18T11:16:34.542000Z",
         "edited": "2014-12-20T21:23:49.907000Z",
@@ -421,6 +421,7 @@ const starships = [
         ]
     },
     {
+        "id": 29,
         "name": "B-wing",
         "model": "A/SF-01 B-wing starfighter",
         "manufacturer": "Slayn & Korpil",
@@ -436,7 +437,7 @@ const starships = [
         "starship_class": "Assault Starfighter",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/3/"
+            3
         ],
         "created": "2014-12-18T11:18:04.763000Z",
         "edited": "2014-12-20T21:23:49.909000Z",
@@ -446,6 +447,7 @@ const starships = [
         ]
     },
     {
+        "id": 31,
         "name": "Republic Cruiser",
         "model": "Consular-class cruiser",
         "manufacturer": "Corellian Engineering Corporation",
@@ -461,7 +463,7 @@ const starships = [
         "starship_class": "Space cruiser",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/4/"
+            4
         ],
         "created": "2014-12-19T17:01:31.488000Z",
         "edited": "2014-12-20T21:23:49.912000Z",
@@ -471,6 +473,7 @@ const starships = [
         ]
     },
     {
+        "id": 32,
         "name": "Droid control ship",
         "model": "Lucrehulk-class Droid Control Ship",
         "manufacturer": "Hoersch-Kessel Drive, Inc.",
@@ -486,9 +489,7 @@ const starships = [
         "starship_class": "Droid control ship",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/4/",
-            "http://swapi.dev/api/films/5/",
-            "http://swapi.dev/api/films/6/"
+            4,5,6
         ],
         "created": "2014-12-19T17:04:06.323000Z",
         "edited": "2014-12-20T21:23:49.915000Z",
@@ -498,6 +499,7 @@ const starships = [
         ]
     },
     {
+        "id": 39,
         "name": "Naboo fighter",
         "model": "N-1 starfighter",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps",
@@ -517,8 +519,7 @@ const starships = [
             "http://swapi.dev/api/people/60/"
         ],
         "films": [
-            "http://swapi.dev/api/films/4/",
-            "http://swapi.dev/api/films/5/"
+            4,5
         ],
         "created": "2014-12-19T17:39:17.582000Z",
         "edited": "2014-12-20T21:23:49.917000Z",
@@ -528,6 +529,7 @@ const starships = [
         ]
     },
     {
+        "id": 40,
         "name": "Naboo Royal Starship",
         "model": "J-type 327 Nubian royal starship",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps, Nubia Star Drives",
@@ -545,7 +547,7 @@ const starships = [
             "http://swapi.dev/api/people/39/"
         ],
         "films": [
-            "http://swapi.dev/api/films/4/"
+            4
         ],
         "created": "2014-12-19T17:45:03.506000Z",
         "edited": "2014-12-20T21:23:49.919000Z",
@@ -555,6 +557,7 @@ const starships = [
         ]
     },
     {
+        "id": 41,
         "name": "Scimitar",
         "model": "Star Courier",
         "manufacturer": "Republic Sienar Systems",
@@ -572,7 +575,7 @@ const starships = [
             "http://swapi.dev/api/people/44/"
         ],
         "films": [
-            "http://swapi.dev/api/films/4/"
+            4
         ],
         "created": "2014-12-20T09:39:56.116000Z",
         "edited": "2014-12-20T21:23:49.922000Z",
@@ -582,6 +585,7 @@ const starships = [
         ]
     },
     {
+        "id": 43,
         "name": "J-type diplomatic barge",
         "model": "J-type diplomatic barge",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps, Nubia Star Drives",
@@ -597,7 +601,7 @@ const starships = [
         "starship_class": "Diplomatic barge",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/5/"
+            5
         ],
         "created": "2014-12-20T11:05:51.237000Z",
         "edited": "2014-12-20T21:23:49.925000Z",
@@ -607,6 +611,7 @@ const starships = [
         ]
     },
     {
+        "id": 47,
         "name": "AA-9 Coruscant freighter",
         "model": "Botajef AA-9 Freighter-Liner",
         "manufacturer": "Botajef Shipyards",
@@ -622,7 +627,7 @@ const starships = [
         "starship_class": "freighter",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/5/"
+            5
         ],
         "created": "2014-12-20T17:24:23.509000Z",
         "edited": "2014-12-20T21:23:49.928000Z",
@@ -632,6 +637,7 @@ const starships = [
         ]
     },
     {
+        "id": 48,
         "name": "Jedi starfighter",
         "model": "Delta-7 Aethersprite-class interceptor",
         "manufacturer": "Kuat Systems Engineering",
@@ -650,8 +656,7 @@ const starships = [
             "http://swapi.dev/api/people/58/"
         ],
         "films": [
-            "http://swapi.dev/api/films/5/",
-            "http://swapi.dev/api/films/6/"
+            5,6
         ],
         "created": "2014-12-20T17:35:23.906000Z",
         "edited": "2014-12-20T21:23:49.930000Z",
@@ -661,6 +666,7 @@ const starships = [
         ]
     },
     {
+        "id": 49,
         "name": "H-type Nubian yacht",
         "model": "H-type Nubian yacht",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps",
@@ -678,7 +684,7 @@ const starships = [
             "http://swapi.dev/api/people/35/"
         ],
         "films": [
-            "http://swapi.dev/api/films/5/"
+            5
         ],
         "created": "2014-12-20T17:46:46.847000Z",
         "edited": "2014-12-20T21:23:49.932000Z",
@@ -688,6 +694,7 @@ const starships = [
         ]
     },
     {
+        "id": 52,
         "name": "Republic Assault ship",
         "model": "Acclamator I-class assault ship",
         "manufacturer": "Rothana Heavy Engineering",
@@ -703,7 +710,7 @@ const starships = [
         "starship_class": "assault ship",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/5/"
+            5
         ],
         "created": "2014-12-20T18:08:42.926000Z",
         "edited": "2014-12-20T21:23:49.935000Z",
@@ -713,6 +720,7 @@ const starships = [
         ]
     },
     {
+        "id": 58,
         "name": "Solar Sailer",
         "model": "Punworcca 116-class interstellar sloop",
         "manufacturer": "Huppla Pasa Tisc Shipwrights Collective",
@@ -728,7 +736,7 @@ const starships = [
         "starship_class": "yacht",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/5/"
+            5
         ],
         "created": "2014-12-20T18:37:56.969000Z",
         "edited": "2014-12-20T21:23:49.937000Z",
@@ -738,6 +746,7 @@ const starships = [
         ]
     },
     {
+        "id": 59,
         "name": "Trade Federation cruiser",
         "model": "Providence-class carrier/destroyer",
         "manufacturer": "Rendili StarDrive, Free Dac Volunteers Engineering corps.",
@@ -756,7 +765,7 @@ const starships = [
             "http://swapi.dev/api/people/11/"
         ],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T19:40:21.902000Z",
         "edited": "2014-12-20T21:23:49.941000Z",
@@ -766,6 +775,7 @@ const starships = [
         ]
     },
     {
+        "id": 61,
         "name": "Theta-class T-2c shuttle",
         "model": "Theta-class T-2c shuttle",
         "manufacturer": "Cygnus Spaceworks",
@@ -781,7 +791,7 @@ const starships = [
         "starship_class": "transport",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T19:48:40.409000Z",
         "edited": "2014-12-20T21:23:49.944000Z",
@@ -791,6 +801,7 @@ const starships = [
         ]
     },
     {
+        "id": 63,
         "name": "Republic attack cruiser",
         "model": "Senator-class Star Destroyer",
         "manufacturer": "Kuat Drive Yards, Allanteen Six shipyards",
@@ -806,7 +817,7 @@ const starships = [
         "starship_class": "star destroyer",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T19:52:56.232000Z",
         "edited": "2014-12-20T21:23:49.946000Z",
@@ -816,6 +827,7 @@ const starships = [
         ]
     },
     {
+        "id": 64,
         "name": "Naboo star skiff",
         "model": "J-type star skiff",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated",
@@ -834,7 +846,7 @@ const starships = [
             "http://swapi.dev/api/people/35/"
         ],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T19:55:15.396000Z",
         "edited": "2014-12-20T21:23:49.948000Z",
@@ -844,6 +856,7 @@ const starships = [
         ]
     },
     {
+        "id": 65,
         "name": "Jedi Interceptor",
         "model": "Eta-2 Actis-class light interceptor",
         "manufacturer": "Kuat Systems Engineering",
@@ -862,7 +875,7 @@ const starships = [
             "http://swapi.dev/api/people/11/"
         ],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T19:56:57.468000Z",
         "edited": "2014-12-20T21:23:49.951000Z",
@@ -872,6 +885,7 @@ const starships = [
         ]
     },
     {
+        "id": 66,
         "name": "arc-170",
         "model": "Aggressive Reconnaissance-170 starfighte",
         "manufacturer": "Incom Corporation, Subpro Corporation",
@@ -887,7 +901,7 @@ const starships = [
         "starship_class": "starfighter",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T20:03:48.603000Z",
         "edited": "2014-12-20T21:23:49.953000Z",
@@ -897,6 +911,7 @@ const starships = [
         ]
     },
     {
+        "id": 68,
         "name": "Banking clan frigte",
         "model": "Munificent-class star frigate",
         "manufacturer": "Hoersch-Kessel Drive, Inc, Gwori Revolutionary Industries",
@@ -912,7 +927,7 @@ const starships = [
         "starship_class": "cruiser",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T20:07:11.538000Z",
         "edited": "2014-12-20T21:23:49.956000Z",
@@ -922,6 +937,7 @@ const starships = [
         ]
     },
     {
+        "id": 74,
         "name": "Belbullab-22 starfighter",
         "model": "Belbullab-22 starfighter",
         "manufacturer": "Feethan Ottraw Scalable Assemblies",
@@ -940,7 +956,7 @@ const starships = [
             "http://swapi.dev/api/people/79/"
         ],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T20:38:05.031000Z",
         "edited": "2014-12-20T21:23:49.959000Z",
@@ -950,6 +966,7 @@ const starships = [
         ]
     },
     {
+        "id": 75,
         "name": "V-wing",
         "model": "Alpha-3 Nimbus-class V-wing starfighter",
         "manufacturer": "Kuat Systems Engineering",
@@ -965,7 +982,7 @@ const starships = [
         "starship_class": "starfighter",
         "pilots": [],
         "films": [
-            "http://swapi.dev/api/films/6/"
+            6
         ],
         "created": "2014-12-20T20:43:04.349000Z",
         "edited": "2014-12-20T21:23:49.961000Z",

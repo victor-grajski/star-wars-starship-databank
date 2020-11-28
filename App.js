@@ -18,6 +18,7 @@ import StarshipDetail from './components/StarshipDetail/StarshipDetail';
 import FilterPanel from './components/FilterPanel/FilterPanel';
 
 // TODO: header buttons
+// TODO: status title
 export default function App() {
   const [state, setState] = useState({
     starships: starships,
@@ -42,6 +43,14 @@ export default function App() {
     _drawer.open();
   };
 
+  const filterResults = id => {
+    setState({
+      ...state,
+      starships: starships.filter(ship => ship.films.includes(id))
+    })
+    closeControlPanel();
+  };
+
 
   if (!isLoaded) {
     return <AppLoading />;
@@ -52,6 +61,7 @@ export default function App() {
         value={{
           ...state,
           orientation: orientation,
+          filterResults: filterResults,
         }}
       >
         {orientation === 'PORTRAIT' ? (
