@@ -12,7 +12,10 @@ export default function Stats({ ship }) {
           style={styles.container}
         >
             <Text style={styles.title}>Stats</Text>
-            <ScrollView style={styles.statsContainer} horizontal={true} >
+            <ScrollView 
+              style={styles.statsContainer} 
+              contentContainerStyle={styles.contentContainer}
+              horizontal={true} >
                 <View style={styles.statsItem}>
                     <Text style={styles.statsItemTitle}>Length</Text>
                     <Text style={styles.statsItemNumber}>{length}</Text>
@@ -59,10 +62,13 @@ const getStyles = (orientation) => {
     if (orientation === 'PORTRAIT') {
       return StyleSheet.create({
         container: {
-          alignItems: "center",
           flex: 1,
           height: '100%',
           width: '100%'
+        },
+        contentContainer: {
+          flexGrow: 1,
+          justifyContent: 'space-between',
         },
         title: {
           paddingTop: 30,
@@ -121,14 +127,16 @@ const getStyles = (orientation) => {
     } else {
       return StyleSheet.create({
         container: {
-          alignItems: "center",
           flex: 1,
           height: '100%',
           width: '100%'
         },
+        contentContainer: {
+          flexGrow: 1,
+          justifyContent: 'space-between',
+        },
         title: {
           paddingTop: 30,
-          paddingLeft: 20,
           paddingRight: 20,
           fontSize: 24,
           fontWeight: '500',
@@ -138,7 +146,6 @@ const getStyles = (orientation) => {
           fontFamily: "Helvetica Neue",
         },
         subtitle: {
-          paddingLeft: 20,
           paddingRight: 20,
           fontSize: 18,
           color: '#fff',
@@ -148,11 +155,10 @@ const getStyles = (orientation) => {
           maxHeight: 30,
         },
         statsContainer: {
-            paddingTop: 20,
-            paddingLeft: 20,
             flex: 1,
+            flexGrow: 1,
             flexDirection: "row",
-            overflow: "scroll",
+            paddingTop: 20,
         },
         statsItem: {
             flex: 1,
@@ -169,7 +175,6 @@ const getStyles = (orientation) => {
           paddingTop: 10,
           fontSize: 48,
           color: '#fff',
-
           textTransform: "uppercase",
           fontFamily: "Helvetica Neue",
         },

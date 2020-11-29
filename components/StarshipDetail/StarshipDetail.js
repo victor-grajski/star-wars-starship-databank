@@ -25,20 +25,42 @@ export default function StarshipDetail({ route, navigation }) {
     
     return (
         <View style={styles.main}>
-          <ScrollView
-            style={styles.container}
-            contentContainerStyle={styles.contentContainer}
-          >
-            <Image source={image} style={styles.image}/> 
-            <Text style={styles.title}>{ship.name}</Text>
-            <Text style={styles.subtitle}>{ship.manufacturer}</Text>
-            <Text style={styles.subtitle}>{ship.starship_class}</Text>
-            <Text style={styles.description}>{ship.description}</Text>
+          {orientation === "PORTRAIT" ? (
+            <ScrollView
+              style={styles.container}
+              contentContainerStyle={styles.contentContainer}
+            >
+              <Image source={image} style={styles.image}/> 
+              <Text style={styles.title}>{ship.name}</Text>
+              <Text style={styles.subtitle}>{ship.manufacturer}</Text>
+              <Text style={styles.subtitle}>{ship.starship_class}</Text>
+              <Text style={styles.description}>{ship.description}</Text>
 
-            <Stats ship={ship} />
-            <Pilots ship={ship} />
-            <Films ship={ship} />
-          </ScrollView>
+              <Stats ship={ship} />
+              <Pilots ship={ship} />
+              <Films ship={ship} />
+            </ScrollView>
+          ) : (
+            <View style={styles.container}>
+              <View style={styles.containerLeft}>
+                <Image source={image} style={styles.image}/>
+                <Text style={styles.description}>{ship.description}</Text>
+              </View>
+              <ScrollView
+                style={styles.containerRight}
+                contentContainerStyle={styles.contentContainer}
+              >
+                <Text style={styles.title}>{ship.name}</Text>
+                <Text style={styles.subtitle}>{ship.manufacturer}</Text>
+                <Text style={styles.subtitle}>{ship.starship_class}</Text> 
+
+                <Stats ship={ship} />
+                <Pilots ship={ship} />
+                <Films ship={ship} />
+              </ScrollView>
+            </View>
+          )}
+          
         </View>
     );
 };
@@ -58,8 +80,6 @@ const getStyles = (orientation) => {
           alignItems: "center",
           flexGrow: 1,
           justifyContent: 'space-between',
-          alignItems: "center",
-
         },
         image: {
           width: '100%',
@@ -100,38 +120,62 @@ const getStyles = (orientation) => {
       });
     } else {
       return StyleSheet.create({
+        main: {
+          flex: 1
+        },
         container: {
-          backgroundColor: '#333333',
-          alignItems: "center",
-          flex: 1,
+          backgroundColor: '#222',
           height: '100%',
-          width: '100%'
+          width: '100%',
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "center",
+          paddingTop: 100,
+        },
+        containerLeft: {
+          flex: 1,
+          alignItems: "center",
+        },
+        containerRight: {
+          flex: 1,
+        },
+        contentContainer: {
+          flexGrow: 1,
+          justifyContent: 'space-between',
+          alignItems: "center",
+          justifyContent: "center",
         },
         image: {
-          width: '100%',
-          height: 300
+          width: 500,
+          height: 400,
+          borderRadius: 10,
         },
         title: {
-          paddingTop: 10,
-          paddingLeft: 10,
-          fontSize: 18,
+          paddingRight: 20,
+          fontSize: 36,
+          fontWeight: '500',
           color: '#ffffff',
           alignSelf: "flex-start",
           textTransform: "uppercase",
           fontFamily: "Helvetica Neue",
-          maxHeight: 40,
-          width: 315
         },
         subtitle: {
           paddingTop: 3,
-          paddingLeft: 10,
+          paddingRight: 20,
           fontSize: 14,
-          color: '#1BBCEA',
+          fontWeight: '500',
+          color: '#fff',
           alignSelf: "flex-start",
           textTransform: "uppercase",
           fontFamily: "Helvetica Neue",
           maxHeight: 30,
-          width: 315
+        },
+        description: {
+          paddingTop: 30,
+          fontSize: 18,
+          color: '#fff',
+          fontFamily: "Helvetica Neue",
+          width: 500,
         },
       });
     }
