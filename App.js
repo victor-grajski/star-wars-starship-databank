@@ -34,8 +34,10 @@ export default function App() {
   });
 
   useEffect(() => {
-    // console.log(state.drawerActive);
-  })
+    // console.log(state.title);
+  });
+
+  const [drawerActive, setDrawerActive] = useState(false);
 
   const [isLoaded] = useFonts({
     'Helvetica Neue': require('./assets/fonts/HelveticaNeue.ttf'),
@@ -47,17 +49,20 @@ export default function App() {
 
   const closeControlPanel = () => {
     _drawer.close();
-    // setDrawerActive(false);
+    // setState({
+    //   ...state,
+    //   drawerActive: !state.drawerActive
+    // })
+    setDrawerActive(!drawerActive);
   };
   
   const openControlPanel = () => {
     _drawer.open();
-    setState({
-      ...state,
-      drawerActive: !state.drawerActive
-    })
-    console.log("Asdf")
-    // setDrawerActive(!drawerActive);
+    // setState({
+    //   ...state,
+    //   drawerActive: !state.drawerActive
+    // })
+    setDrawerActive(!drawerActive);
   };
 
   const filterResults = id => {
@@ -72,12 +77,16 @@ export default function App() {
       title = film.title;
       filteredStarships = starships.filter(ship => ship.films.includes(id));
     }
+    console.log(title)
 
     setState({
       ...state,
       starships: filteredStarships,
-      title: title
+      title: title,
+      favoritesToggle: false,
+      // drawerActive: !state.drawerActive
     })
+    // _drawer.close();
     closeControlPanel();
   };
 
@@ -127,6 +136,7 @@ export default function App() {
         value={{
           ...state,
           orientation: orientation,
+          drawerActive: drawerActive,
           filterResults: filterResults,
           toggleFavorites: toggleFavorites,
           addFavorite: addFavorite,
@@ -140,10 +150,7 @@ export default function App() {
             tapToClose={true}
             openDrawerOffset={(viewport) => viewport.width - 300}
             captureGestures={true}
-            onCloseStart={() => setState({
-              ...state,
-              drawerActive: false
-            })}
+            onCloseStart={() => setDrawerActive(false)}
           >
             <Stack.Navigator>
               <Stack.Screen
@@ -164,7 +171,7 @@ export default function App() {
                     <View style={{ paddingLeft: 20 }}>
                       <Hamburger
                         type="spinCross" 
-                        active={state.drawerActive} 
+                        active={drawerActive} 
                         underlayColor="transparent"
                         color="white"
                         onPress={() => {
@@ -201,10 +208,7 @@ export default function App() {
             tapToClose={true}
             openDrawerOffset={(viewport) => viewport.width - 300}
             captureGestures={true}
-            onCloseStart={() => setState({
-              ...state,
-              drawerActive: false
-            })}
+            onCloseStart={() => setDrawerActive(false)}
           >
             <Stack.Navigator>
               <Stack.Screen
@@ -225,7 +229,7 @@ export default function App() {
                     <View style={{ paddingLeft: 20 }}>
                       <Hamburger
                         type="spinCross" 
-                        active={state.drawerActive} 
+                        active={drawerActive} 
                         underlayColor="transparent"
                         color="white"
                         onPress={() => {
