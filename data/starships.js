@@ -296,7 +296,7 @@ const starships = [
         "consumables": "1 month",
         "hyperdrive_rating": "3.0",
         "MGLT": "70",
-        "starship_class": "Patrol craft",
+        "starship_class": "Patrol and attack craft",
         "pilots": [
             "http://swapi.dev/api/people/22/"
         ],
@@ -308,7 +308,8 @@ const starships = [
         "url": "http://swapi.dev/api/starships/21/",
         "images": [
             slave1
-        ]
+        ],
+        "description": "The deadly Slave I was infamous for its association with Jango Fett, a bounty hunter in Mandalorian armor. Fett packed the craft with weapons, from laser cannons and projectile launchers to seismic charges. Boba Fett inherited Slave I upon Jango’s death, but Aurra Sing crashed it on Florrum and Boba was taken into Republic custody. Hondo Ohnaka repaired Slave I, and Boba later reclaimed it. A generation after Jango’s death, the distinctive craft remained the last thing fugitives wanted to see on their scanners."
     },
     {
         "id": 22,

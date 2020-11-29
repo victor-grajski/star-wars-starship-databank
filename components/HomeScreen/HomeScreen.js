@@ -25,7 +25,7 @@ const getStyles = (orientation) => {
   if (orientation === 'PORTRAIT') {
     return StyleSheet.create({
       main: {
-        flex: 1
+        flex: 1,
       },
       container: {
         backgroundColor: '#222',

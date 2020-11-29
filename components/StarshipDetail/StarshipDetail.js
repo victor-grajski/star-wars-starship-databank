@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import { View, Text, Button, StyleSheet, Image } from 'react-native';
+import { View, ScrollView, Text, Button, StyleSheet, Image } from 'react-native';
 import Context from '../../Context';
 
 import DetailHeartButton from '../DetailHeartButton/DetailHeartButton';
+import Pilots from './Pilots/Pilots';
+import Stats from './Stats/Stats';
 
 export default function StarshipDetail({ route, navigation }) {
     const { orientation } = useContext(Context);
@@ -20,13 +22,18 @@ export default function StarshipDetail({ route, navigation }) {
     }, [navigation]);
     
     return (
-        <View
-            style={styles.container}
-        >
+        <View style={styles.main}>
+          <ScrollView
+            contentContainerStyle={styles.container}
+          >
             <Image source={image} style={styles.image}/> 
             <Text style={styles.title}>{ship.name}</Text>
-            <Text style={styles.title}>{ship.manufacturer}</Text>
-            <Text style={styles.title}>{ship.starship_class}</Text>
+            <Text style={styles.subtitle}>{ship.manufacturer}</Text>
+            <Text style={styles.subtitle}>{ship.starship_class}</Text>
+            <Text style={styles.description}>{ship.description}</Text>
+
+            <Stats ship={ship} />
+          </ScrollView>
         </View>
     );
 };
@@ -34,10 +41,16 @@ export default function StarshipDetail({ route, navigation }) {
 const getStyles = (orientation) => {
     if (orientation === 'PORTRAIT') {
       return StyleSheet.create({
+        main: {
+          flex: 1
+        },
         container: {
           backgroundColor: '#333333',
           alignItems: "center",
           flex: 1,
+          flexGrow: 1,
+          justifyContent: 'space-between',
+          alignItems: "center",
           height: '100%',
           width: '100%'
         },
@@ -46,26 +59,36 @@ const getStyles = (orientation) => {
           height: 300
         },
         title: {
-          paddingTop: 10,
-          paddingLeft: 10,
-          fontSize: 18,
+          paddingTop: 20,
+          paddingLeft: 20,
+          paddingRight: 20,
+          fontSize: 36,
+          fontWeight: '500',
           color: '#ffffff',
           alignSelf: "flex-start",
           textTransform: "uppercase",
           fontFamily: "Helvetica Neue",
-          maxHeight: 40,
-          width: 315
         },
         subtitle: {
           paddingTop: 3,
-          paddingLeft: 10,
+          paddingLeft: 20,
+          paddingRight: 20,
           fontSize: 14,
-          color: '#1BBCEA',
+          fontWeight: '500',
+          color: '#fff',
           alignSelf: "flex-start",
           textTransform: "uppercase",
           fontFamily: "Helvetica Neue",
           maxHeight: 30,
-          width: 315
+        },
+        description: {
+          paddingTop: 30,
+          paddingLeft: 20,
+          paddingRight: 20,
+          fontSize: 18,
+          color: '#fff',
+          alignSelf: "flex-start",
+          fontFamily: "Helvetica Neue",
         },
       });
     } else {

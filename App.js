@@ -20,8 +20,6 @@ import StarshipDetail from './components/StarshipDetail/StarshipDetail';
 import FilterPanel from './components/FilterPanel/FilterPanel';
 import HeartButton from './components/HeartButton/HeartButton';
 
-// TODO: android heart icon when menu open
-// TODO: hamburger icon padding
 // TODO: hamburger animation timing
 // TODO: landscape grid
 export default function App() {
@@ -36,7 +34,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    console.log(state.drawerActive);
+    // console.log(state.drawerActive);
   })
 
   const [isLoaded] = useFonts({
