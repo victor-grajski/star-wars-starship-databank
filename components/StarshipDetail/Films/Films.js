@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { View, Text, Button, StyleSheet, Image, ScrollView } from 'react-native';
 import Context from '../../../Context';
 
-export default function Pilots({ ship }) {
+export default function Films({ ship }) {
     const { orientation } = useContext(Context);
     let { pilots, images } = ship;
     let image = Image.resolveAssetSource(images[0]);
@@ -12,12 +12,18 @@ export default function Pilots({ ship }) {
         <View
           style={styles.container}
         >
-            <Text style={styles.title}>Pilots</Text>
+            <Text style={styles.title}>Films</Text>
             <View style={styles.pilots}>
               <View style={styles.card}>
                 <Image source={image} style={styles.image}/> 
-                <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>Pilot Name</Text>
-                <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>Pilot Homeworld</Text>
+                <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>Film Name</Text>
+                <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>Film Year</Text>
+              </View>
+              
+              <View style={styles.card}>
+                <Image source={image} style={styles.image}/> 
+                <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>Film Name</Text>
+                <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>Film Year</Text>
               </View>
             </View>
         </View>

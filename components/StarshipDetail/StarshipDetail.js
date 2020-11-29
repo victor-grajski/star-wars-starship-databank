@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { View, ScrollView, Text, Button, StyleSheet, Image } from 'react-native';
 import Context from '../../Context';
+// import films from '../../data/films';
 
 import DetailHeartButton from '../DetailHeartButton/DetailHeartButton';
 import Pilots from './Pilots/Pilots';
 import Stats from './Stats/Stats';
+import Films from './Films/Films';
 
 export default function StarshipDetail({ route, navigation }) {
     const { orientation } = useContext(Context);
@@ -35,6 +37,7 @@ export default function StarshipDetail({ route, navigation }) {
 
             <Stats ship={ship} />
             <Pilots ship={ship} />
+            <Films ship={ship} />
           </ScrollView>
         </View>
     );
@@ -47,7 +50,7 @@ const getStyles = (orientation) => {
           flex: 1
         },
         container: {
-          backgroundColor: '#333333',
+          backgroundColor: '#222',
           height: '100%',
           width: '100%'
         },
