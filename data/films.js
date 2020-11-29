@@ -31,9 +31,9 @@ const films = [
         "created": "2014-12-12T11:26:24.656000Z",
         "edited": "2014-12-15T13:07:53.386000Z",
         "url": "http://swapi.dev/api/films/2/",
-        "images": {
+        "images": [
             ESB
-        }
+        ]
     },
     {
         "id": 3,
@@ -79,9 +79,9 @@ const films = [
         "created": "2014-12-20T10:57:57.886000Z",
         "edited": "2014-12-20T20:18:48.516000Z",
         "url": "http://swapi.dev/api/films/5/",
-        "images": {
+        "images": [
             AOTC
-        }
+        ]
     },
     {
         "id": 6,

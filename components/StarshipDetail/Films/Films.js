@@ -1,32 +1,36 @@
 import React, { useContext } from 'react';
 import { View, Text, Button, StyleSheet, Image, ScrollView } from 'react-native';
 import Context from '../../../Context';
+import filmsData from '../../../data/films';
+import moment from 'moment';
 
 export default function Films({ ship }) {
     const { orientation } = useContext(Context);
-    let { pilots, images } = ship;
-    let image = Image.resolveAssetSource(images[0]);
+    let { films } = ship;
     let styles = getStyles(orientation);
+
+    let filmsList = filmsData.filter(film => films.includes(film.id));
     
     return (
-        <View
-          style={styles.container}
-        >
-            <Text style={styles.title}>Films</Text>
-            <View style={styles.pilots}>
-              <View style={styles.card}>
-                <Image source={image} style={styles.image}/> 
-                <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>Film Name</Text>
-                <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>Film Year</Text>
-              </View>
-              
-              <View style={styles.card}>
-                <Image source={image} style={styles.image}/> 
-                <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>Film Name</Text>
-                <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>Film Year</Text>
-              </View>
+      <View
+        style={styles.container}
+      >
+        {filmsList.length === 1 ? (
+          <Text style={styles.title}>Film</Text>
+        ) : (
+          <Text style={styles.title}>Films</Text>
+        )}
+          
+        <View style={styles.films}>
+          {filmsList.map((film) => 
+            <View style={styles.card} key={film.id}>
+              <Image source={film.images[0]} style={styles.image}/> 
+              <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>{film.title}</Text>
+              <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>{moment(film.release_date).format('MMMM D, YYYY')}</Text>
             </View>
+          )}
         </View>
+      </View>
     );
 };
 

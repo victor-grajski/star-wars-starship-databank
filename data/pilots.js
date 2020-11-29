@@ -3,6 +3,7 @@ import bobaFett from '../assets/images/pilots/boba-fett.jpeg';
 
 const pilots = [
     {
+        "id": 22,
         "name": "Boba Fett",
         "height": "183",
         "mass": "78.2",
@@ -11,7 +12,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "31.5BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/10/",
+        "homeworld": "Kamino",
         "films": [
             "http://swapi.dev/api/films/2/",
             "http://swapi.dev/api/films/3/",
@@ -30,6 +31,7 @@ const pilots = [
         ]
     },
     {
+        "id": 13,
         "name": "Darth Vader",
         "height": "202",
         "mass": "136",
@@ -38,7 +40,7 @@ const pilots = [
         "eye_color": "yellow",
         "birth_year": "41.9BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/1/",
+        "homeworld": "Tatooine",
         "films": [
             "http://swapi.dev/api/films/1/",
             "http://swapi.dev/api/films/2/",

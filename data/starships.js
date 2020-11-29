@@ -298,7 +298,7 @@ const starships = [
         "MGLT": "70",
         "starship_class": "Patrol and attack craft",
         "pilots": [
-            "http://swapi.dev/api/people/22/"
+            22
         ],
         "films": [
             2,5

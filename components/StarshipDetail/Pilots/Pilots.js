@@ -1,25 +1,34 @@
 import React, { useContext } from 'react';
 import { View, Text, Button, StyleSheet, Image, ScrollView } from 'react-native';
 import Context from '../../../Context';
+import pilotsData from '../../../data/pilots';
 
 export default function Pilots({ ship }) {
     const { orientation } = useContext(Context);
-    let { pilots, images } = ship;
-    let image = Image.resolveAssetSource(images[0]);
+    let { pilots } = ship;
     let styles = getStyles(orientation);
+
+    let pilotsList = pilotsData.filter(pilot => pilots.includes(pilot.id));
     
     return (
         <View
           style={styles.container}
         >
+          {pilotsList.length === 1 ? (
+            <Text style={styles.title}>Pilot</Text>
+          ) : (
             <Text style={styles.title}>Pilots</Text>
-            <View style={styles.pilots}>
-              <View style={styles.card}>
-                <Image source={image} style={styles.image}/> 
-                <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>Pilot Name</Text>
-                <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>Pilot Homeworld</Text>
+          )}
+            
+          <View style={styles.pilots}>
+            {pilotsList.map((pilot) => 
+              <View style={styles.card} key={pilot.id}>
+                <Image source={pilot.images[0]} style={styles.image}/> 
+                <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode='tail'>{pilot.name}</Text>
+                <Text style={styles.subtitle} numberOfLines={1} ellipsizeMode='tail'>{pilot.homeworld}</Text>
               </View>
-            </View>
+            )}
+          </View>
         </View>
     );
 };
