@@ -5403,6 +5403,11 @@ stacktrace-parser@^0.1.3:
   dependencies:
     type-fest "^0.7.1"
 
+starfield-react@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/starfield-react/-/starfield-react-3.0.1.tgz#e8ef18ae61af62d958d411984fceea934725a382"
+  integrity sha512-mVnEdMBGMWhgtFeXL+torjKOm75DLKbjQjoEQh6my8gkYr0BuKcdHK/I5Py1CJP0bZJtlobqnZHE4GfXKYc6SA==
+
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"

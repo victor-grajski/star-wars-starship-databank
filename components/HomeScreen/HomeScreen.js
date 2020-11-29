@@ -3,12 +3,15 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import Context from '../../Context';
 import StarshipListItem from '../StarshipList/StarshipListItem';
 
+import Starfield from '../Starfield/Starfield';
+
 export default function HomeScreen() {
   const { orientation, starships, title } = useContext(Context);
   let styles = getStyles(orientation);
 
   return (
     <View style={styles.main}>
+      <Starfield />
       <Text style={styles.film} numberOfLines={1} ellipsizeMode='tail'>{title}</Text>
       <ScrollView 
           style={styles.container}
@@ -26,9 +29,7 @@ const getStyles = (orientation) => {
     return StyleSheet.create({
       main: {
         flex: 1,
-      },
-      container: {
-        backgroundColor: '#222',
+        backgroundColor: '#000',
       },
       contentContainer: {
         flexGrow: 1,
@@ -44,16 +45,13 @@ const getStyles = (orientation) => {
         color: '#fff',
         textTransform: "uppercase",
         fontFamily: "Helvetica Neue",
-        backgroundColor: '#222',
       },
     });
   } else {
     return StyleSheet.create({
         main: {
-          flex: 1
-        },
-        container: {
-            backgroundColor: '#222',
+          flex: 1,
+          backgroundColor: '#000',
         },
         contentContainer: {
             flexGrow: 1,
@@ -72,7 +70,6 @@ const getStyles = (orientation) => {
           color: '#fff',
           textTransform: "uppercase",
           fontFamily: "Helvetica Neue",
-          backgroundColor: '#222',
         },
     });
   }
