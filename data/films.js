@@ -1,5 +1,9 @@
+import phantomMenace from '../assets/images/films/phantom-menace.png';
 import AOTC from '../assets/images/films/aotc.jpg';
+import ROTS from '../assets/images/films/rots.jpeg';
+import aNewHope from '../assets/images/films/a-new-hope.jpeg';
 import ESB from '../assets/images/films/empire.jpeg';
+import ROTJ from '../assets/images/films/rotj.png';
 
 const films = [
     {
@@ -15,7 +19,10 @@ const films = [
         ],
         "created": "2014-12-10T14:23:31.880000Z",
         "edited": "2014-12-20T19:49:45.256000Z",
-        "url": "http://swapi.dev/api/films/1/"
+        "url": "http://swapi.dev/api/films/1/",
+        "images": [
+            aNewHope
+        ]
     },
     {
         "id": 2,
@@ -48,7 +55,10 @@ const films = [
         ],
         "created": "2014-12-18T10:39:33.255000Z",
         "edited": "2014-12-20T09:48:37.462000Z",
-        "url": "http://swapi.dev/api/films/3/"
+        "url": "http://swapi.dev/api/films/3/",
+        "images": [
+            ROTJ
+        ]
     },
     {
         "id": 4,
@@ -63,7 +73,10 @@ const films = [
         ],
         "created": "2014-12-19T16:52:55.740000Z",
         "edited": "2014-12-20T10:54:07.216000Z",
-        "url": "http://swapi.dev/api/films/4/"
+        "url": "http://swapi.dev/api/films/4/",
+        "images": [
+            phantomMenace
+        ]
     },
     {
         "id": 5,
@@ -96,7 +109,10 @@ const films = [
         ],
         "created": "2014-12-20T18:49:38.403000Z",
         "edited": "2014-12-20T20:47:52.073000Z",
-        "url": "http://swapi.dev/api/films/6/"
+        "url": "http://swapi.dev/api/films/6/",
+        "images": [
+            ROTS
+        ]
     }
 ];
 

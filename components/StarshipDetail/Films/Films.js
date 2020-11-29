@@ -118,7 +118,6 @@ const getStyles = (orientation) => {
           flex: 1,
           height: '100%',
           width: '100%',
-          paddingTop: 30,
         },
         films: {
           flex: 1

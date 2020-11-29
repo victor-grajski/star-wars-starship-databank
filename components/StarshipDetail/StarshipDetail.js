@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
 import { View, ScrollView, Text, Button, StyleSheet, Image } from 'react-native';
 import Context from '../../Context';
-// import films from '../../data/films';
 
 import DetailHeartButton from '../DetailHeartButton/DetailHeartButton';
 import Pilots from './Pilots/Pilots';
 import Stats from './Stats/Stats';
 import Films from './Films/Films';
 
+// TODO: cargo capacity
 export default function StarshipDetail({ route, navigation }) {
     const { orientation } = useContext(Context);
     let ship = route.params.ship;
-    let { name, manufacturer, images } = ship;
+    let { images, pilots } = ship;
     let image = Image.resolveAssetSource(images[0]);
     let styles = getStyles(orientation);
 
@@ -34,10 +34,22 @@ export default function StarshipDetail({ route, navigation }) {
               <Text style={styles.title}>{ship.name}</Text>
               <Text style={styles.subtitle}>{ship.manufacturer}</Text>
               <Text style={styles.subtitle}>{ship.starship_class}</Text>
-              <Text style={styles.description}>{ship.description}</Text>
+
+              {ship.description ? (
+                <Text style={styles.description}>{ship.description}</Text>
+              ) : (
+                <></>
+              )}
+              
 
               <Stats ship={ship} />
-              <Pilots ship={ship} />
+
+              {pilots.length >= 1 ? (
+                <Pilots ship={ship} />
+              ) : (
+                <></>
+              )}
+              
               <Films ship={ship} />
             </ScrollView>
           ) : (
@@ -55,7 +67,13 @@ export default function StarshipDetail({ route, navigation }) {
                 <Text style={styles.subtitle}>{ship.starship_class}</Text> 
 
                 <Stats ship={ship} />
-                <Pilots ship={ship} />
+                
+                {pilots.length >= 1 ? (
+                  <Pilots ship={ship} />
+                ) : (
+                  <></>
+                )}
+
                 <Films ship={ship} />
               </ScrollView>
             </View>

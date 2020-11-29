@@ -37,7 +37,7 @@ const getStyles = (orientation) => {
         flex: 1,
         minWidth: 200,
         maxWidth: 335,
-        maxHeight: 250
+        maxHeight: 250,
       },
       image: {
         width: 335,

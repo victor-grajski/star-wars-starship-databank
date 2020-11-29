@@ -3,7 +3,7 @@ import bWing from '../assets/images/starships/b-wing.webp';
 import executor from '../assets/images/starships/executor.webp';
 import falcon from '../assets/images/starships/falcon.jpg';
 import slave1 from '../assets/images/starships/slave1.jpeg';
-import starDestroyer from '../assets/images/starships/star-destroyer.webp';
+import starDestroyer from '../assets/images/starships/star-destroyer.jpeg';
 import tantiveIV from '../assets/images/starships/tantive-iv.jpeg';
 import tydirium from '../assets/images/starships/tydirium.webp';
 import xWing from '../assets/images/starships/x-wing.jpg';
@@ -15,12 +15,12 @@ const starships = [
         "name": "CR90 corvette",
         "model": "CR90 corvette",
         "manufacturer": "Corellian Engineering Corporation",
-        "cost_in_credits": "3500000",
+        "cost_in_credits": "3,500,000",
         "length": "150",
         "max_atmosphering_speed": "950",
         "crew": "30-165",
         "passengers": "600",
-        "cargo_capacity": "3000000",
+        "cargo_capacity": "3,000,000",
         "consumables": "1 year",
         "hyperdrive_rating": "2.0",
         "MGLT": "60",
@@ -41,7 +41,7 @@ const starships = [
         "name": "Star Destroyer",
         "model": "Imperial I-class Star Destroyer",
         "manufacturer": "Kuat Drive Yards",
-        "cost_in_credits": "150000000",
+        "cost_in_credits": "150,000,000",
         "length": "1,600",
         "max_atmosphering_speed": "975",
         "crew": "47,060",
