@@ -24,7 +24,8 @@ export default function StarshipDetail({ route, navigation }) {
     return (
         <View style={styles.main}>
           <ScrollView
-            contentContainerStyle={styles.container}
+            style={styles.container}
+            contentContainerStyle={styles.contentContainer}
           >
             <Image source={image} style={styles.image}/> 
             <Text style={styles.title}>{ship.name}</Text>
@@ -33,6 +34,7 @@ export default function StarshipDetail({ route, navigation }) {
             <Text style={styles.description}>{ship.description}</Text>
 
             <Stats ship={ship} />
+            <Pilots ship={ship} />
           </ScrollView>
         </View>
     );
@@ -46,13 +48,15 @@ const getStyles = (orientation) => {
         },
         container: {
           backgroundColor: '#333333',
+          height: '100%',
+          width: '100%'
+        },
+        contentContainer: {
           alignItems: "center",
-          flex: 1,
           flexGrow: 1,
           justifyContent: 'space-between',
           alignItems: "center",
-          height: '100%',
-          width: '100%'
+
         },
         image: {
           width: '100%',
