@@ -19,7 +19,6 @@ import plo from '../assets/images/pilots/plo.jpeg';
 import grievous from '../assets/images/pilots/grievous.jpeg';
 import jango from '../assets/images/pilots/jango.png';
 
-// TODO: homeworld
 const pilots = [
     {
         "id": 22,
@@ -88,7 +87,7 @@ const pilots = [
         "eye_color": "blue",
         "birth_year": "200BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/14/",
+        "homeworld": "Kashyyyk",
         "films": [
             "http://swapi.dev/api/films/1/",
             "http://swapi.dev/api/films/2/",
@@ -122,7 +121,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "29BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/22/",
+        "homeworld": "Corellia",
         "films": [
             "http://swapi.dev/api/films/1/",
             "http://swapi.dev/api/films/2/",
@@ -151,7 +150,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "31BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/30/",
+        "homeworld": "Socorro",
         "films": [
             "http://swapi.dev/api/films/2/",
             "http://swapi.dev/api/films/3/"
@@ -176,7 +175,7 @@ const pilots = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/33/",
+        "homeworld": "Sullust",
         "films": [
             "http://swapi.dev/api/films/3/"
         ],
@@ -202,7 +201,7 @@ const pilots = [
         "eye_color": "blue",
         "birth_year": "19BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/1/",
+        "homeworld": "Tatooine",
         "films": [
             "http://swapi.dev/api/films/1/",
             "http://swapi.dev/api/films/2/",
@@ -233,7 +232,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "24BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/1/",
+        "homeworld": "Tatooine",
         "films": [
             "http://swapi.dev/api/films/1/"
         ],
@@ -257,7 +256,7 @@ const pilots = [
         "eye_color": "hazel",
         "birth_year": "21BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/22/",
+        "homeworld": "Corellia",
         "films": [
             "http://swapi.dev/api/films/1/",
             "http://swapi.dev/api/films/2/",
@@ -285,7 +284,7 @@ const pilots = [
         "eye_color": "blue",
         "birth_year": "unknown",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/26/",
+        "homeworld": "Bestine IV",
         "films": [
             "http://swapi.dev/api/films/1/"
         ],
@@ -309,7 +308,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/28/",
+        "homeworld": "Unknown",
         "films": [
             "http://swapi.dev/api/films/3/"
         ],
@@ -333,7 +332,7 @@ const pilots = [
         "eye_color": "blue",
         "birth_year": "41.9BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/1/",
+        "homeworld": "Tatooine",
         "films": [
             "http://swapi.dev/api/films/4/",
             "http://swapi.dev/api/films/5/",
@@ -364,7 +363,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "46BBY",
         "gender": "female",
-        "homeworld": "http://swapi.dev/api/planets/8/",
+        "homeworld": "Naboo",
         "films": [
             "http://swapi.dev/api/films/4/",
             "http://swapi.dev/api/films/5/",
@@ -392,7 +391,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/8/",
+        "homeworld": "Naboo",
         "films": [
             "http://swapi.dev/api/films/5/"
         ],
@@ -416,7 +415,7 @@ const pilots = [
         "eye_color": "blue",
         "birth_year": "unknown",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/8/",
+        "homeworld": "Naboo",
         "films": [
             "http://swapi.dev/api/films/4/"
         ],
@@ -440,7 +439,7 @@ const pilots = [
         "eye_color": "yellow",
         "birth_year": "54BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/36/",
+        "homeworld": "Dathomir",
         "films": [
             "http://swapi.dev/api/films/4/"
         ],
@@ -468,7 +467,7 @@ const pilots = [
         "eye_color": "blue-gray",
         "birth_year": "57BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/20/",
+        "homeworld": "Stewjon",
         "films": [
             "http://swapi.dev/api/films/1/",
             "http://swapi.dev/api/films/2/",
@@ -503,7 +502,7 @@ const pilots = [
         "eye_color": "black",
         "birth_year": "22BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/49/",
+        "homeworld": "Dorin",
         "films": [
             "http://swapi.dev/api/films/4/",
             "http://swapi.dev/api/films/5/",
@@ -531,7 +530,7 @@ const pilots = [
         "eye_color": "green, yellow",
         "birth_year": "unknown",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/59/",
+        "homeworld": "Kalee",
         "films": [
             "http://swapi.dev/api/films/6/"
         ],
@@ -559,7 +558,7 @@ const pilots = [
         "eye_color": "brown",
         "birth_year": "66BBY",
         "gender": "male",
-        "homeworld": "http://swapi.dev/api/planets/53/",
+        "homeworld": "Concord Dawn",
         "films": [
             "http://swapi.dev/api/films/5/"
         ],

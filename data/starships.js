@@ -5,12 +5,37 @@ import falcon from '../assets/images/starships/falcon.jpg';
 import slave1 from '../assets/images/starships/slave1.jpeg';
 import starDestroyer from '../assets/images/starships/star-destroyer.jpeg';
 import tantiveIV from '../assets/images/starships/tantive-iv.jpeg';
-import tydirium from '../assets/images/starships/tydirium.webp';
-import xWing from '../assets/images/starships/x-wing.jpg';
+import tydirium from '../assets/images/starships/tydirium.jpg';
+import xWing from '../assets/images/starships/x-wing.jpeg';
 import yWing from '../assets/images/starships/y-wing.jpeg';
+import sentinel from '../assets/images/starships/sentinel.jpg';
+import deathStar from '../assets/images/starships/death-star.jpeg';
+import tieAdvanced from '../assets/images/starships/tie-advanced.jpg';
+import rebelTransport from '../assets/images/starships/rebel-transport.jpg';
+import nebulon from '../assets/images/starships/nebulon.png';
+import calamariCruiser from '../assets/images/starships/calamari-cruiser.jpeg';
+import republicCruiser from '../assets/images/starships/republic-cruiser.jpeg';
+import droidControlShip from '../assets/images/starships/droid-control-ship.jpg';
+import nabooStarfighter from '../assets/images/starships/naboo-starfighter.jpg';
+import nabooRoyalStarship from '../assets/images/starships/naboo-royal-starship.png';
+import sithInfiltrator from '../assets/images/starships/sith-infiltrator.jpeg';
+import jType from '../assets/images/starships/j-type.jpg';
+import aa9 from '../assets/images/starships/aa-9.jpeg';
+import jediStarfighter from '../assets/images/starships/jedi-starfighter.jpeg';
+import hType from '../assets/images/starships/h-type.webp';
+import republicAssaultShip from '../assets/images/starships/republic-assault-ship.webp';
+import solarSailer from '../assets/images/starships/solar-sailer.jpeg';
+import tradeFederationCruiser from '../assets/images/starships/trade-federation-cruiser.webp';
+import thetaClassShuttle from '../assets/images/starships/theta-class-shuttle.jpg';
+import republicAttackCruiser from '../assets/images/starships/republic-attack-cruiser.webp';
+import nabooStarSkiff from '../assets/images/starships/naboo-star-skiff.webp';
+import jediInterceptor from '../assets/images/starships/jedi-interceptor.jpeg';
+import arc170 from '../assets/images/starships/arc170.webp';
+import bankingClanFrigate from '../assets/images/starships/banking-clan-frigate.webp';
+import grievousShip from '../assets/images/starships/grievous-ship.jpeg';
+import vWing from '../assets/images/starships/v-wing.webp';
 
-// TODO: number formatting
-// TODO: images
+// TODO: description
 const starships = [
     {
         "id": 2,
@@ -23,7 +48,8 @@ const starships = [
         "crew": "30-165",
         "passengers": "600",
         "cargo_capacity": "3,000,000",
-        "consumables": "1 year",
+        "consumables": "1",
+        "consumables_unit": "year",
         "hyperdrive_rating": "2.0",
         "MGLT": "60",
         "starship_class": "corvette",
@@ -49,7 +75,8 @@ const starships = [
         "crew": "47,060",
         "passengers": "n/a",
         "cargo_capacity": "36,000,000",
-        "consumables": "2 years",
+        "consumables": "2",
+        "consumables_unit": "years",
         "hyperdrive_rating": "2.0",
         "MGLT": "60",
         "starship_class": "Star Destroyer",
@@ -75,7 +102,8 @@ const starships = [
         "crew": "5",
         "passengers": "75",
         "cargo_capacity": "180,000",
-        "consumables": "1 month",
+        "consumables": "1",
+        "consumables_unit": "month",
         "hyperdrive_rating": "1.0",
         "MGLT": "70",
         "starship_class": "landing craft",
@@ -87,7 +115,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.873000Z",
         "url": "http://swapi.dev/api/starships/5/",
         "images": [
-            tantiveIV
+            sentinel
         ]
     },
     {
@@ -101,7 +129,8 @@ const starships = [
         "crew": "342,953",
         "passengers": "843,342",
         "cargo_capacity": "1,000,000,000,000",
-        "consumables": "3 years",
+        "consumables": "3",
+        "consumables_unit": "years",
         "hyperdrive_rating": "4.0",
         "MGLT": "10",
         "starship_class": "Deep Space Mobile Battlestation",
@@ -113,7 +142,7 @@ const starships = [
         "edited": "2014-12-20T21:26:24.783000Z",
         "url": "http://swapi.dev/api/starships/9/",
         "images": [
-            tantiveIV
+            deathStar
         ]
     },
     {
@@ -127,7 +156,8 @@ const starships = [
         "crew": "4",
         "passengers": "6",
         "cargo_capacity": "100,000",
-        "consumables": "2 months",
+        "consumables": "2",
+        "consumables_unit": "months",
         "hyperdrive_rating": "0.5",
         "MGLT": "75",
         "starship_class": "Light freighter",
@@ -181,7 +211,8 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "110",
-        "consumables": "1 week",
+        "consumables": "1",
+        "consumables_unit": "week",
         "hyperdrive_rating": "1.0",
         "MGLT": "100",
         "starship_class": "Starfighter",
@@ -203,13 +234,14 @@ const starships = [
         "name": "TIE Advanced x1",
         "model": "Twin Ion Engine Advanced x1",
         "manufacturer": "Sienar Fleet Systems",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "9.2",
         "max_atmosphering_speed": "1,200",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "150",
-        "consumables": "5 days",
+        "consumables": "5",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.0",
         "MGLT": "105",
         "starship_class": "Starfighter",
@@ -223,7 +255,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.889000Z",
         "url": "http://swapi.dev/api/starships/13/",
         "images": [
-            tantiveIV
+            tieAdvanced
         ]
     },
     {
@@ -237,7 +269,8 @@ const starships = [
         "crew": "279,144",
         "passengers": "38000",
         "cargo_capacity": "250,000,000",
-        "consumables": "6 years",
+        "consumables": "6",
+        "consumables_unit": "years",
         "hyperdrive_rating": "2.0",
         "MGLT": "40",
         "starship_class": "Star dreadnought",
@@ -257,13 +290,14 @@ const starships = [
         "name": "Rebel transport",
         "model": "GR-75 medium transport",
         "manufacturer": "Gallofree Yards, Inc.",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "90",
         "max_atmosphering_speed": "650",
         "crew": "6",
         "passengers": "90",
         "cargo_capacity": "19,000,000",
-        "consumables": "6 months",
+        "consumables": "6",
+        "consumables_unit": "months",
         "hyperdrive_rating": "4.0",
         "MGLT": "20",
         "starship_class": "Medium transport",
@@ -275,7 +309,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.895000Z",
         "url": "http://swapi.dev/api/starships/17/",
         "images": [
-            tantiveIV
+            rebelTransport
         ]
     },
     {
@@ -283,13 +317,14 @@ const starships = [
         "name": "Slave 1",
         "model": "Firespray-31-class patrol and attack",
         "manufacturer": "Kuat Systems Engineering",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "21.5",
         "max_atmosphering_speed": "1,000",
         "crew": "1",
         "passengers": "6",
         "cargo_capacity": "70,000",
-        "consumables": "1 month",
+        "consumables": "1",
+        "consumables_unit": "month",
         "hyperdrive_rating": "3.0",
         "MGLT": "70",
         "starship_class": "Patrol and attack craft",
@@ -318,7 +353,8 @@ const starships = [
         "crew": "6",
         "passengers": "20",
         "cargo_capacity": "80,000",
-        "consumables": "2 months",
+        "consumables": "2",
+        "consumables_unit": "months",
         "hyperdrive_rating": "1.0",
         "MGLT": "50",
         "starship_class": "Armed government transport",
@@ -346,7 +382,8 @@ const starships = [
         "crew": "854",
         "passengers": "75",
         "cargo_capacity": "6,000,000",
-        "consumables": "2 years",
+        "consumables": "2",
+        "consumables_unit": "years",
         "hyperdrive_rating": "2.0",
         "MGLT": "40",
         "starship_class": "Escort ship",
@@ -358,7 +395,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.902000Z",
         "url": "http://swapi.dev/api/starships/23/",
         "images": [
-            tantiveIV
+            nebulon
         ]
     },
     {
@@ -371,8 +408,9 @@ const starships = [
         "max_atmosphering_speed": "n/a",
         "crew": "5,400",
         "passengers": "1,200",
-        "cargo_capacity": "unknown",
-        "consumables": "2 years",
+        "cargo_capacity": "?",
+        "consumables": "2",
+        "consumables_unit": "years",
         "hyperdrive_rating": "1.0",
         "MGLT": "60",
         "starship_class": "Star Cruiser",
@@ -384,7 +422,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.904000Z",
         "url": "http://swapi.dev/api/starships/27/",
         "images": [
-            tantiveIV
+            calamariCruiser
         ]
     },
     {
@@ -398,7 +436,8 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "40",
-        "consumables": "1 week",
+        "consumables": "1",
+        "consumables_unit": "week",
         "hyperdrive_rating": "1.0",
         "MGLT": "120",
         "starship_class": "Starfighter",
@@ -426,7 +465,8 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "45",
-        "consumables": "1 week",
+        "consumables": "1",
+        "consumables_unit": "week",
         "hyperdrive_rating": "2.0",
         "MGLT": "91",
         "starship_class": "Assault Starfighter",
@@ -446,15 +486,15 @@ const starships = [
         "name": "Republic Cruiser",
         "model": "Consular-class cruiser",
         "manufacturer": "Corellian Engineering Corporation",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "115",
         "max_atmosphering_speed": "900",
         "crew": "9",
         "passengers": "16",
-        "cargo_capacity": "unknown",
-        "consumables": "unknown",
+        "cargo_capacity": "?",
+        "consumables": "?",
         "hyperdrive_rating": "2.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "Space cruiser",
         "pilots": [],
         "films": [
@@ -464,7 +504,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.912000Z",
         "url": "http://swapi.dev/api/starships/31/",
         "images": [
-            tantiveIV
+            republicCruiser
         ]
     },
     {
@@ -472,15 +512,16 @@ const starships = [
         "name": "Droid control ship",
         "model": "Lucrehulk-class Droid Control Ship",
         "manufacturer": "Hoersch-Kessel Drive, Inc.",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "3,170",
         "max_atmosphering_speed": "n/a",
         "crew": "175",
         "passengers": "139,000",
         "cargo_capacity": "4,000,000,000",
-        "consumables": "500 days",
+        "consumables": "500",
+        "consumables_unit": "days",
         "hyperdrive_rating": "2.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "Droid control ship",
         "pilots": [],
         "films": [
@@ -490,7 +531,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.915000Z",
         "url": "http://swapi.dev/api/starships/32/",
         "images": [
-            tantiveIV
+            droidControlShip
         ]
     },
     {
@@ -504,9 +545,10 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "65",
-        "consumables": "7 days",
+        "consumables": "7",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "Starfighter",
         "pilots": [
             11,35,60
@@ -518,7 +560,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.917000Z",
         "url": "http://swapi.dev/api/starships/39/",
         "images": [
-            tantiveIV
+            nabooStarfighter
         ]
     },
     {
@@ -526,15 +568,15 @@ const starships = [
         "name": "Naboo Royal Starship",
         "model": "J-type 327 Nubian royal starship",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps, Nubia Star Drives",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "76",
         "max_atmosphering_speed": "920",
         "crew": "8",
-        "passengers": "unknown",
-        "cargo_capacity": "unknown",
-        "consumables": "unknown",
+        "passengers": "?",
+        "cargo_capacity": "?",
+        "consumables": "?",
         "hyperdrive_rating": "1.8",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "yacht",
         "pilots": [
             39
@@ -546,12 +588,12 @@ const starships = [
         "edited": "2014-12-20T21:23:49.919000Z",
         "url": "http://swapi.dev/api/starships/40/",
         "images": [
-            tantiveIV
+            nabooRoyalStarship
         ]
     },
     {
         "id": 41,
-        "name": "Scimitar",
+        "name": "Sith Infiltrator",
         "model": "Star Courier",
         "manufacturer": "Republic Sienar Systems",
         "cost_in_credits": "55,000,000",
@@ -560,9 +602,10 @@ const starships = [
         "crew": "1",
         "passengers": "6",
         "cargo_capacity": "2,500,000",
-        "consumables": "30 days",
+        "consumables": "30",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.5",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "Space Transport",
         "pilots": [
             44
@@ -574,7 +617,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.922000Z",
         "url": "http://swapi.dev/api/starships/41/",
         "images": [
-            tantiveIV
+            sithInfiltrator
         ]
     },
     {
@@ -587,10 +630,11 @@ const starships = [
         "max_atmosphering_speed": "2,000",
         "crew": "5",
         "passengers": "10",
-        "cargo_capacity": "unknown",
-        "consumables": "1 year",
+        "cargo_capacity": "?",
+        "consumables": "1",
+        "consumables_unit": "year",
         "hyperdrive_rating": "0.7",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "Diplomatic barge",
         "pilots": [],
         "films": [
@@ -600,7 +644,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.925000Z",
         "url": "http://swapi.dev/api/starships/43/",
         "images": [
-            tantiveIV
+            jType
         ]
     },
     {
@@ -608,15 +652,15 @@ const starships = [
         "name": "AA-9 Coruscant freighter",
         "model": "Botajef AA-9 Freighter-Liner",
         "manufacturer": "Botajef Shipyards",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "390",
-        "max_atmosphering_speed": "unknown",
-        "crew": "unknown",
+        "max_atmosphering_speed": "?",
+        "crew": "?",
         "passengers": "30,000",
-        "cargo_capacity": "unknown",
-        "consumables": "unknown",
-        "hyperdrive_rating": "unknown",
-        "MGLT": "unknown",
+        "cargo_capacity": "?",
+        "consumables": "?",
+        "hyperdrive_rating": "?",
+        "MGLT": "?",
         "starship_class": "freighter",
         "pilots": [],
         "films": [
@@ -626,7 +670,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.928000Z",
         "url": "http://swapi.dev/api/starships/47/",
         "images": [
-            tantiveIV
+            aa9
         ]
     },
     {
@@ -640,9 +684,10 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "60",
-        "consumables": "7 days",
+        "consumables": "7",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "Starfighter",
         "pilots": [
             10,58
@@ -654,7 +699,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.930000Z",
         "url": "http://swapi.dev/api/starships/48/",
         "images": [
-            tantiveIV
+            jediStarfighter
         ]
     },
     {
@@ -662,15 +707,15 @@ const starships = [
         "name": "H-type Nubian yacht",
         "model": "H-type Nubian yacht",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "47.9",
         "max_atmosphering_speed": "8,000",
         "crew": "4",
-        "passengers": "unknown",
-        "cargo_capacity": "unknown",
-        "consumables": "unknown",
+        "passengers": "?",
+        "cargo_capacity": "?",
+        "consumables": "?",
         "hyperdrive_rating": "0.9",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "yacht",
         "pilots": [
             35
@@ -682,7 +727,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.932000Z",
         "url": "http://swapi.dev/api/starships/49/",
         "images": [
-            tantiveIV
+            hType
         ]
     },
     {
@@ -690,15 +735,16 @@ const starships = [
         "name": "Republic Assault ship",
         "model": "Acclamator I-class assault ship",
         "manufacturer": "Rothana Heavy Engineering",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "752",
-        "max_atmosphering_speed": "unknown",
+        "max_atmosphering_speed": "?",
         "crew": "700",
         "passengers": "16,000",
         "cargo_capacity": "11,250,000",
-        "consumables": "2 years",
+        "consumables": "2",
+        "consumables_unit": "years",
         "hyperdrive_rating": "0.6",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "assault ship",
         "pilots": [],
         "films": [
@@ -708,7 +754,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.935000Z",
         "url": "http://swapi.dev/api/starships/52/",
         "images": [
-            tantiveIV
+            republicAssaultShip
         ]
     },
     {
@@ -722,9 +768,10 @@ const starships = [
         "crew": "3",
         "passengers": "11",
         "cargo_capacity": "240",
-        "consumables": "7 days",
+        "consumables": "7",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.5",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "yacht",
         "pilots": [],
         "films": [
@@ -734,7 +781,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.937000Z",
         "url": "http://swapi.dev/api/starships/58/",
         "images": [
-            tantiveIV
+            solarSailer
         ]
     },
     {
@@ -748,9 +795,10 @@ const starships = [
         "crew": "600",
         "passengers": "48,247",
         "cargo_capacity": "50,000,000",
-        "consumables": "4 years",
+        "consumables": "4",
+        "consumables_unit": "years",
         "hyperdrive_rating": "1.5",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "capital ship",
         "pilots": [
             10,11
@@ -762,7 +810,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.941000Z",
         "url": "http://swapi.dev/api/starships/59/",
         "images": [
-            tantiveIV
+            tradeFederationCruiser
         ]
     },
     {
@@ -776,9 +824,10 @@ const starships = [
         "crew": "5",
         "passengers": "16",
         "cargo_capacity": "50,000",
-        "consumables": "56 days",
+        "consumables": "56",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "transport",
         "pilots": [],
         "films": [
@@ -788,7 +837,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.944000Z",
         "url": "http://swapi.dev/api/starships/61/",
         "images": [
-            tantiveIV
+            thetaClassShuttle
         ]
     },
     {
@@ -802,9 +851,10 @@ const starships = [
         "crew": "7,400",
         "passengers": "2,000",
         "cargo_capacity": "20,000,000",
-        "consumables": "2 years",
+        "consumables": "2",
+        "consumables_unit": "years",
         "hyperdrive_rating": "1.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "star destroyer",
         "pilots": [],
         "films": [
@@ -814,7 +864,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.946000Z",
         "url": "http://swapi.dev/api/starships/63/",
         "images": [
-            tantiveIV
+            republicAttackCruiser
         ]
     },
     {
@@ -822,15 +872,15 @@ const starships = [
         "name": "Naboo star skiff",
         "model": "J-type star skiff",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated",
-        "cost_in_credits": "unknown",
+        "cost_in_credits": "?",
         "length": "29.2",
         "max_atmosphering_speed": "1,050",
         "crew": "3",
         "passengers": "3",
-        "cargo_capacity": "unknown",
-        "consumables": "unknown",
+        "cargo_capacity": "?",
+        "consumables": "?",
         "hyperdrive_rating": "0.5",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "yacht",
         "pilots": [
             10,35
@@ -842,7 +892,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.948000Z",
         "url": "http://swapi.dev/api/starships/64/",
         "images": [
-            tantiveIV
+            nabooStarSkiff
         ]
     },
     {
@@ -856,9 +906,10 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "60",
-        "consumables": "2 days",
+        "consumables": "2",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "starfighter",
         "pilots": [
             10,11
@@ -870,7 +921,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.951000Z",
         "url": "http://swapi.dev/api/starships/65/",
         "images": [
-            tantiveIV
+            jediInterceptor
         ]
     },
     {
@@ -884,7 +935,8 @@ const starships = [
         "crew": "3",
         "passengers": "0",
         "cargo_capacity": "110",
-        "consumables": "5 days",
+        "consumables": "5",
+        "consumables_unit": "days",
         "hyperdrive_rating": "1.0",
         "MGLT": "100",
         "starship_class": "starfighter",
@@ -896,23 +948,24 @@ const starships = [
         "edited": "2014-12-20T21:23:49.953000Z",
         "url": "http://swapi.dev/api/starships/66/",
         "images": [
-            tantiveIV
+            arc170
         ]
     },
     {
         "id": 68,
-        "name": "Banking clan frigte",
+        "name": "Banking clan frigate",
         "model": "Munificent-class star frigate",
         "manufacturer": "Hoersch-Kessel Drive, Inc, Gwori Revolutionary Industries",
         "cost_in_credits": "57,000,000",
         "length": "825",
-        "max_atmosphering_speed": "unknown",
+        "max_atmosphering_speed": "?",
         "crew": "200",
-        "passengers": "unknown",
+        "passengers": "?",
         "cargo_capacity": "40,000,000",
-        "consumables": "2 years",
+        "consumables": "2",
+        "consumables_unit": "years",
         "hyperdrive_rating": "1.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "cruiser",
         "pilots": [],
         "films": [
@@ -922,7 +975,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.956000Z",
         "url": "http://swapi.dev/api/starships/68/",
         "images": [
-            tantiveIV
+            bankingClanFrigate
         ]
     },
     {
@@ -936,9 +989,10 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "140",
-        "consumables": "7 days",
+        "consumables": "7",
+        "consumables_unit": "days",
         "hyperdrive_rating": "6",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "starfighter",
         "pilots": [
             10,79
@@ -950,7 +1004,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.959000Z",
         "url": "http://swapi.dev/api/starships/74/",
         "images": [
-            tantiveIV
+            grievousShip
         ]
     },
     {
@@ -964,9 +1018,10 @@ const starships = [
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "60",
-        "consumables": "15 hours",
+        "consumables": "15",
+        "consumables_unit": "hours",
         "hyperdrive_rating": "1.0",
-        "MGLT": "unknown",
+        "MGLT": "?",
         "starship_class": "starfighter",
         "pilots": [],
         "films": [
@@ -976,7 +1031,7 @@ const starships = [
         "edited": "2014-12-20T21:23:49.961000Z",
         "url": "http://swapi.dev/api/starships/75/",
         "images": [
-            tantiveIV
+            vWing
         ]
     },
 ];

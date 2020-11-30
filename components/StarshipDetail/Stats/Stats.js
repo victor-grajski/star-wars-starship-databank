@@ -2,12 +2,19 @@ import React, { useContext } from 'react';
 import { View, Text, Button, StyleSheet, Image, ScrollView } from 'react-native';
 import Context from '../../../Context';
 
-// TODO: cargo capacity
-// TODO: max atmosphering speed
-// TODO: consumables
 export default function Stats({ ship }) {
     const { orientation } = useContext(Context);
-    let { length, cost_in_credits, crew, passengers, hyperdrive_rating, MGLT } = ship;
+    let { 
+      length, 
+      cost_in_credits, 
+      crew, passengers, 
+      hyperdrive_rating, 
+      MGLT, 
+      cargo_capacity, 
+      max_atmosphering_speed,
+      consumables,
+      consumables_unit 
+    } = ship;
     let styles = getStyles(orientation);
     
     return (
@@ -27,13 +34,7 @@ export default function Stats({ ship }) {
 
                 <View style={styles.statsItem}>
                     <Text style={styles.statsItemTitle}>Cost</Text>
-
-                    {cost_in_credits === "unknown" ? (
-                        <Text style={styles.statsItemNumber}>?</Text>
-                    ) : (
-                        <Text style={styles.statsItemNumber}>{cost_in_credits}</Text>
-                    )}
-                    
+                    <Text style={styles.statsItemNumber}>{cost_in_credits}</Text>
                     <Text style={styles.unit}>Credits</Text>
                 </View>
 
@@ -55,6 +56,24 @@ export default function Stats({ ship }) {
                 <View style={styles.statsItem}>
                     <Text style={styles.statsItemTitle}>MGLT</Text>
                     <Text style={styles.statsItemNumber}>{MGLT}</Text>
+                </View>
+
+                <View style={styles.statsItem}>
+                    <Text style={styles.statsItemTitle}>Cargo Capacity</Text>
+                    <Text style={styles.statsItemNumber}>{cargo_capacity}</Text>
+                    <Text style={styles.unit}>Kilograms</Text>
+                </View>
+
+                <View style={styles.statsItem}>
+                    <Text style={styles.statsItemTitle}>Max. Atmosphere Speed</Text>
+                    <Text style={styles.statsItemNumber}>{max_atmosphering_speed}</Text>
+                    <Text style={styles.unit}>Miles Per Hour</Text>
+                </View>
+
+                <View style={styles.statsItem}>
+                    <Text style={styles.statsItemTitle}>Consumables</Text>
+                    <Text style={styles.statsItemNumber}>{consumables}</Text>
+                    <Text style={styles.unit}>{consumables_unit}</Text>
                 </View>
             </ScrollView>
         </View>
