@@ -9,6 +9,8 @@ import tydirium from '../assets/images/starships/tydirium.webp';
 import xWing from '../assets/images/starships/x-wing.jpg';
 import yWing from '../assets/images/starships/y-wing.jpeg';
 
+// TODO: number formatting
+// TODO: images
 const starships = [
     {
         "id": 2,
@@ -46,7 +48,7 @@ const starships = [
         "max_atmosphering_speed": "975",
         "crew": "47,060",
         "passengers": "n/a",
-        "cargo_capacity": "36000000",
+        "cargo_capacity": "36,000,000",
         "consumables": "2 years",
         "hyperdrive_rating": "2.0",
         "MGLT": "60",
@@ -67,12 +69,12 @@ const starships = [
         "name": "Sentinel-class landing craft",
         "model": "Sentinel-class landing craft",
         "manufacturer": "Sienar Fleet Systems, Cyngus Spaceworks",
-        "cost_in_credits": "240000",
+        "cost_in_credits": "240,000",
         "length": "38",
-        "max_atmosphering_speed": "1000",
+        "max_atmosphering_speed": "1,000",
         "crew": "5",
         "passengers": "75",
-        "cargo_capacity": "180000",
+        "cargo_capacity": "180,000",
         "consumables": "1 month",
         "hyperdrive_rating": "1.0",
         "MGLT": "70",
@@ -93,12 +95,12 @@ const starships = [
         "name": "Death Star",
         "model": "DS-1 Orbital Battle Station",
         "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
-        "cost_in_credits": "1000000000000",
-        "length": "120000",
+        "cost_in_credits": "1,000,000,000,000",
+        "length": "120,000",
         "max_atmosphering_speed": "n/a",
         "crew": "342,953",
         "passengers": "843,342",
-        "cargo_capacity": "1000000000000",
+        "cargo_capacity": "1,000,000,000,000",
         "consumables": "3 years",
         "hyperdrive_rating": "4.0",
         "MGLT": "10",
@@ -119,21 +121,18 @@ const starships = [
         "name": "Millennium Falcon",
         "model": "YT-1300 light freighter",
         "manufacturer": "Corellian Engineering Corporation",
-        "cost_in_credits": "100000",
+        "cost_in_credits": "100,000",
         "length": "34.37",
-        "max_atmosphering_speed": "1050",
+        "max_atmosphering_speed": "1,050",
         "crew": "4",
         "passengers": "6",
-        "cargo_capacity": "100000",
+        "cargo_capacity": "100,000",
         "consumables": "2 months",
         "hyperdrive_rating": "0.5",
         "MGLT": "75",
         "starship_class": "Light freighter",
         "pilots": [
-            "http://swapi.dev/api/people/13/",
-            "http://swapi.dev/api/people/14/",
-            "http://swapi.dev/api/people/25/",
-            "http://swapi.dev/api/people/31/"
+            13,14,25,31
         ],
         "films": [
             1,2,3
@@ -150,9 +149,9 @@ const starships = [
         "name": "Y-wing",
         "model": "BTL Y-wing",
         "manufacturer": "Koensayr Manufacturing",
-        "cost_in_credits": "134999",
+        "cost_in_credits": "134,999",
         "length": "14",
-        "max_atmosphering_speed": "1000km",
+        "max_atmosphering_speed": "1,000",
         "crew": "2",
         "passengers": "0",
         "cargo_capacity": "110",
@@ -176,9 +175,9 @@ const starships = [
         "name": "X-wing",
         "model": "T-65 X-wing",
         "manufacturer": "Incom Corporation",
-        "cost_in_credits": "149999",
+        "cost_in_credits": "149,999",
         "length": "12.5",
-        "max_atmosphering_speed": "1050",
+        "max_atmosphering_speed": "1,050",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "110",
@@ -187,10 +186,7 @@ const starships = [
         "MGLT": "100",
         "starship_class": "Starfighter",
         "pilots": [
-            "http://swapi.dev/api/people/1/",
-            "http://swapi.dev/api/people/9/",
-            "http://swapi.dev/api/people/18/",
-            "http://swapi.dev/api/people/19/"
+            1,9,18,19
         ],
         "films": [
             1,2,3
@@ -209,7 +205,7 @@ const starships = [
         "manufacturer": "Sienar Fleet Systems",
         "cost_in_credits": "unknown",
         "length": "9.2",
-        "max_atmosphering_speed": "1200",
+        "max_atmosphering_speed": "1,200",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "150",
@@ -218,7 +214,7 @@ const starships = [
         "MGLT": "105",
         "starship_class": "Starfighter",
         "pilots": [
-            "http://swapi.dev/api/people/4/"
+            4
         ],
         "films": [
             1
@@ -235,12 +231,12 @@ const starships = [
         "name": "Executor",
         "model": "Executor-class star dreadnought",
         "manufacturer": "Kuat Drive Yards, Fondor Shipyards",
-        "cost_in_credits": "1143350000",
-        "length": "19000",
+        "cost_in_credits": "1,143,350,000",
+        "length": "19,000",
         "max_atmosphering_speed": "n/a",
         "crew": "279,144",
         "passengers": "38000",
-        "cargo_capacity": "250000000",
+        "cargo_capacity": "250,000,000",
         "consumables": "6 years",
         "hyperdrive_rating": "2.0",
         "MGLT": "40",
@@ -266,7 +262,7 @@ const starships = [
         "max_atmosphering_speed": "650",
         "crew": "6",
         "passengers": "90",
-        "cargo_capacity": "19000000",
+        "cargo_capacity": "19,000,000",
         "consumables": "6 months",
         "hyperdrive_rating": "4.0",
         "MGLT": "20",
@@ -289,16 +285,16 @@ const starships = [
         "manufacturer": "Kuat Systems Engineering",
         "cost_in_credits": "unknown",
         "length": "21.5",
-        "max_atmosphering_speed": "1000",
+        "max_atmosphering_speed": "1,000",
         "crew": "1",
         "passengers": "6",
-        "cargo_capacity": "70000",
+        "cargo_capacity": "70,000",
         "consumables": "1 month",
         "hyperdrive_rating": "3.0",
         "MGLT": "70",
         "starship_class": "Patrol and attack craft",
         "pilots": [
-            22
+            69,22
         ],
         "films": [
             2,5
@@ -316,20 +312,18 @@ const starships = [
         "name": "Imperial shuttle",
         "model": "Lambda-class T-4a shuttle",
         "manufacturer": "Sienar Fleet Systems",
-        "cost_in_credits": "240000",
+        "cost_in_credits": "240,000",
         "length": "20",
         "max_atmosphering_speed": "850",
         "crew": "6",
         "passengers": "20",
-        "cargo_capacity": "80000",
+        "cargo_capacity": "80,000",
         "consumables": "2 months",
         "hyperdrive_rating": "1.0",
         "MGLT": "50",
         "starship_class": "Armed government transport",
         "pilots": [
-            "http://swapi.dev/api/people/1/",
-            "http://swapi.dev/api/people/13/",
-            "http://swapi.dev/api/people/14/"
+            1,13,14
         ],
         "films": [
             2,3
@@ -346,12 +340,12 @@ const starships = [
         "name": "EF76 Nebulon-B escort frigate",
         "model": "EF76 Nebulon-B escort frigate",
         "manufacturer": "Kuat Drive Yards",
-        "cost_in_credits": "8500000",
+        "cost_in_credits": "8,500,000",
         "length": "300",
         "max_atmosphering_speed": "800",
         "crew": "854",
         "passengers": "75",
-        "cargo_capacity": "6000000",
+        "cargo_capacity": "6,000,000",
         "consumables": "2 years",
         "hyperdrive_rating": "2.0",
         "MGLT": "40",
@@ -372,11 +366,11 @@ const starships = [
         "name": "Calamari Cruiser",
         "model": "MC80 Liberty type Star Cruiser",
         "manufacturer": "Mon Calamari shipyards",
-        "cost_in_credits": "104000000",
-        "length": "1200",
+        "cost_in_credits": "104,000,000",
+        "length": "1,200",
         "max_atmosphering_speed": "n/a",
-        "crew": "5400",
-        "passengers": "1200",
+        "crew": "5,400",
+        "passengers": "1,200",
         "cargo_capacity": "unknown",
         "consumables": "2 years",
         "hyperdrive_rating": "1.0",
@@ -398,9 +392,9 @@ const starships = [
         "name": "A-wing",
         "model": "RZ-1 A-wing Interceptor",
         "manufacturer": "Alliance Underground Engineering, Incom Corporation",
-        "cost_in_credits": "175000",
+        "cost_in_credits": "175,000",
         "length": "9.6",
-        "max_atmosphering_speed": "1300",
+        "max_atmosphering_speed": "1,300",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "40",
@@ -409,7 +403,7 @@ const starships = [
         "MGLT": "120",
         "starship_class": "Starfighter",
         "pilots": [
-            "http://swapi.dev/api/people/29/"
+            29
         ],
         "films": [
             3
@@ -426,7 +420,7 @@ const starships = [
         "name": "B-wing",
         "model": "A/SF-01 B-wing starfighter",
         "manufacturer": "Slayn & Korpil",
-        "cost_in_credits": "220000",
+        "cost_in_credits": "220,000",
         "length": "16.9",
         "max_atmosphering_speed": "950",
         "crew": "1",
@@ -479,11 +473,11 @@ const starships = [
         "model": "Lucrehulk-class Droid Control Ship",
         "manufacturer": "Hoersch-Kessel Drive, Inc.",
         "cost_in_credits": "unknown",
-        "length": "3170",
+        "length": "3,170",
         "max_atmosphering_speed": "n/a",
         "crew": "175",
-        "passengers": "139000",
-        "cargo_capacity": "4000000000",
+        "passengers": "139,000",
+        "cargo_capacity": "4,000,000,000",
         "consumables": "500 days",
         "hyperdrive_rating": "2.0",
         "MGLT": "unknown",
@@ -504,9 +498,9 @@ const starships = [
         "name": "Naboo fighter",
         "model": "N-1 starfighter",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps",
-        "cost_in_credits": "200000",
+        "cost_in_credits": "200,000",
         "length": "11",
-        "max_atmosphering_speed": "1100",
+        "max_atmosphering_speed": "1,100",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "65",
@@ -515,9 +509,7 @@ const starships = [
         "MGLT": "unknown",
         "starship_class": "Starfighter",
         "pilots": [
-            "http://swapi.dev/api/people/11/",
-            "http://swapi.dev/api/people/35/",
-            "http://swapi.dev/api/people/60/"
+            11,35,60
         ],
         "films": [
             4,5
@@ -545,7 +537,7 @@ const starships = [
         "MGLT": "unknown",
         "starship_class": "yacht",
         "pilots": [
-            "http://swapi.dev/api/people/39/"
+            39
         ],
         "films": [
             4
@@ -562,18 +554,18 @@ const starships = [
         "name": "Scimitar",
         "model": "Star Courier",
         "manufacturer": "Republic Sienar Systems",
-        "cost_in_credits": "55000000",
+        "cost_in_credits": "55,000,000",
         "length": "26.5",
-        "max_atmosphering_speed": "1180",
+        "max_atmosphering_speed": "1,180",
         "crew": "1",
         "passengers": "6",
-        "cargo_capacity": "2500000",
+        "cargo_capacity": "2,500,000",
         "consumables": "30 days",
         "hyperdrive_rating": "1.5",
         "MGLT": "unknown",
         "starship_class": "Space Transport",
         "pilots": [
-            "http://swapi.dev/api/people/44/"
+            44
         ],
         "films": [
             4
@@ -590,9 +582,9 @@ const starships = [
         "name": "J-type diplomatic barge",
         "model": "J-type diplomatic barge",
         "manufacturer": "Theed Palace Space Vessel Engineering Corps, Nubia Star Drives",
-        "cost_in_credits": "2000000",
+        "cost_in_credits": "2,000,000",
         "length": "39",
-        "max_atmosphering_speed": "2000",
+        "max_atmosphering_speed": "2,000",
         "crew": "5",
         "passengers": "10",
         "cargo_capacity": "unknown",
@@ -620,7 +612,7 @@ const starships = [
         "length": "390",
         "max_atmosphering_speed": "unknown",
         "crew": "unknown",
-        "passengers": "30000",
+        "passengers": "30,000",
         "cargo_capacity": "unknown",
         "consumables": "unknown",
         "hyperdrive_rating": "unknown",
@@ -642,9 +634,9 @@ const starships = [
         "name": "Jedi starfighter",
         "model": "Delta-7 Aethersprite-class interceptor",
         "manufacturer": "Kuat Systems Engineering",
-        "cost_in_credits": "180000",
+        "cost_in_credits": "180,000",
         "length": "8",
-        "max_atmosphering_speed": "1150",
+        "max_atmosphering_speed": "1,150",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "60",
@@ -653,8 +645,7 @@ const starships = [
         "MGLT": "unknown",
         "starship_class": "Starfighter",
         "pilots": [
-            "http://swapi.dev/api/people/10/",
-            "http://swapi.dev/api/people/58/"
+            10,58
         ],
         "films": [
             5,6
@@ -673,7 +664,7 @@ const starships = [
         "manufacturer": "Theed Palace Space Vessel Engineering Corps",
         "cost_in_credits": "unknown",
         "length": "47.9",
-        "max_atmosphering_speed": "8000",
+        "max_atmosphering_speed": "8,000",
         "crew": "4",
         "passengers": "unknown",
         "cargo_capacity": "unknown",
@@ -682,7 +673,7 @@ const starships = [
         "MGLT": "unknown",
         "starship_class": "yacht",
         "pilots": [
-            "http://swapi.dev/api/people/35/"
+            35
         ],
         "films": [
             5
@@ -703,8 +694,8 @@ const starships = [
         "length": "752",
         "max_atmosphering_speed": "unknown",
         "crew": "700",
-        "passengers": "16000",
-        "cargo_capacity": "11250000",
+        "passengers": "16,000",
+        "cargo_capacity": "11,250,000",
         "consumables": "2 years",
         "hyperdrive_rating": "0.6",
         "MGLT": "unknown",
@@ -725,9 +716,9 @@ const starships = [
         "name": "Solar Sailer",
         "model": "Punworcca 116-class interstellar sloop",
         "manufacturer": "Huppla Pasa Tisc Shipwrights Collective",
-        "cost_in_credits": "35700",
+        "cost_in_credits": "35,700",
         "length": "15.2",
-        "max_atmosphering_speed": "1600",
+        "max_atmosphering_speed": "1,600",
         "crew": "3",
         "passengers": "11",
         "cargo_capacity": "240",
@@ -751,19 +742,18 @@ const starships = [
         "name": "Trade Federation cruiser",
         "model": "Providence-class carrier/destroyer",
         "manufacturer": "Rendili StarDrive, Free Dac Volunteers Engineering corps.",
-        "cost_in_credits": "125000000",
-        "length": "1088",
-        "max_atmosphering_speed": "1050",
+        "cost_in_credits": "125,000,000",
+        "length": "1,088",
+        "max_atmosphering_speed": "1,050",
         "crew": "600",
-        "passengers": "48247",
-        "cargo_capacity": "50000000",
+        "passengers": "48,247",
+        "cargo_capacity": "50,000,000",
         "consumables": "4 years",
         "hyperdrive_rating": "1.5",
         "MGLT": "unknown",
         "starship_class": "capital ship",
         "pilots": [
-            "http://swapi.dev/api/people/10/",
-            "http://swapi.dev/api/people/11/"
+            10,11
         ],
         "films": [
             6
@@ -780,12 +770,12 @@ const starships = [
         "name": "Theta-class T-2c shuttle",
         "model": "Theta-class T-2c shuttle",
         "manufacturer": "Cygnus Spaceworks",
-        "cost_in_credits": "1000000",
+        "cost_in_credits": "1,000,000",
         "length": "18.5",
-        "max_atmosphering_speed": "2000",
+        "max_atmosphering_speed": "2,000",
         "crew": "5",
         "passengers": "16",
-        "cargo_capacity": "50000",
+        "cargo_capacity": "50,000",
         "consumables": "56 days",
         "hyperdrive_rating": "1.0",
         "MGLT": "unknown",
@@ -806,12 +796,12 @@ const starships = [
         "name": "Republic attack cruiser",
         "model": "Senator-class Star Destroyer",
         "manufacturer": "Kuat Drive Yards, Allanteen Six shipyards",
-        "cost_in_credits": "59000000",
-        "length": "1137",
+        "cost_in_credits": "59,000,000",
+        "length": "1,137",
         "max_atmosphering_speed": "975",
-        "crew": "7400",
-        "passengers": "2000",
-        "cargo_capacity": "20000000",
+        "crew": "7,400",
+        "passengers": "2,000",
+        "cargo_capacity": "20,000,000",
         "consumables": "2 years",
         "hyperdrive_rating": "1.0",
         "MGLT": "unknown",
@@ -834,7 +824,7 @@ const starships = [
         "manufacturer": "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated",
         "cost_in_credits": "unknown",
         "length": "29.2",
-        "max_atmosphering_speed": "1050",
+        "max_atmosphering_speed": "1,050",
         "crew": "3",
         "passengers": "3",
         "cargo_capacity": "unknown",
@@ -843,8 +833,7 @@ const starships = [
         "MGLT": "unknown",
         "starship_class": "yacht",
         "pilots": [
-            "http://swapi.dev/api/people/10/",
-            "http://swapi.dev/api/people/35/"
+            10,35
         ],
         "films": [
             6
@@ -861,9 +850,9 @@ const starships = [
         "name": "Jedi Interceptor",
         "model": "Eta-2 Actis-class light interceptor",
         "manufacturer": "Kuat Systems Engineering",
-        "cost_in_credits": "320000",
+        "cost_in_credits": "320,000",
         "length": "5.47",
-        "max_atmosphering_speed": "1500",
+        "max_atmosphering_speed": "1,500",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "60",
@@ -872,8 +861,7 @@ const starships = [
         "MGLT": "unknown",
         "starship_class": "starfighter",
         "pilots": [
-            "http://swapi.dev/api/people/10/",
-            "http://swapi.dev/api/people/11/"
+            10,11
         ],
         "films": [
             6
@@ -890,9 +878,9 @@ const starships = [
         "name": "arc-170",
         "model": "Aggressive Reconnaissance-170 starfighte",
         "manufacturer": "Incom Corporation, Subpro Corporation",
-        "cost_in_credits": "155000",
+        "cost_in_credits": "155,000",
         "length": "14.5",
-        "max_atmosphering_speed": "1000",
+        "max_atmosphering_speed": "1,000",
         "crew": "3",
         "passengers": "0",
         "cargo_capacity": "110",
@@ -916,12 +904,12 @@ const starships = [
         "name": "Banking clan frigte",
         "model": "Munificent-class star frigate",
         "manufacturer": "Hoersch-Kessel Drive, Inc, Gwori Revolutionary Industries",
-        "cost_in_credits": "57000000",
+        "cost_in_credits": "57,000,000",
         "length": "825",
         "max_atmosphering_speed": "unknown",
         "crew": "200",
         "passengers": "unknown",
-        "cargo_capacity": "40000000",
+        "cargo_capacity": "40,000,000",
         "consumables": "2 years",
         "hyperdrive_rating": "1.0",
         "MGLT": "unknown",
@@ -942,9 +930,9 @@ const starships = [
         "name": "Belbullab-22 starfighter",
         "model": "Belbullab-22 starfighter",
         "manufacturer": "Feethan Ottraw Scalable Assemblies",
-        "cost_in_credits": "168000",
+        "cost_in_credits": "168,000",
         "length": "6.71",
-        "max_atmosphering_speed": "1100",
+        "max_atmosphering_speed": "1,100",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "140",
@@ -953,8 +941,7 @@ const starships = [
         "MGLT": "unknown",
         "starship_class": "starfighter",
         "pilots": [
-            "http://swapi.dev/api/people/10/",
-            "http://swapi.dev/api/people/79/"
+            10,79
         ],
         "films": [
             6
@@ -971,9 +958,9 @@ const starships = [
         "name": "V-wing",
         "model": "Alpha-3 Nimbus-class V-wing starfighter",
         "manufacturer": "Kuat Systems Engineering",
-        "cost_in_credits": "102500",
+        "cost_in_credits": "102,500",
         "length": "7.9",
-        "max_atmosphering_speed": "1050",
+        "max_atmosphering_speed": "1,050",
         "crew": "1",
         "passengers": "0",
         "cargo_capacity": "60",

@@ -7,7 +7,6 @@ import Pilots from './Pilots/Pilots';
 import Stats from './Stats/Stats';
 import Films from './Films/Films';
 
-// TODO: cargo capacity
 export default function StarshipDetail({ route, navigation }) {
     const { orientation } = useContext(Context);
     let ship = route.params.ship;

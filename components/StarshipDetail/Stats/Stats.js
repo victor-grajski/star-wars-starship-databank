@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import { View, Text, Button, StyleSheet, Image, ScrollView } from 'react-native';
 import Context from '../../../Context';
 
+// TODO: cargo capacity
+// TODO: max atmosphering speed
+// TODO: consumables
 export default function Stats({ ship }) {
     const { orientation } = useContext(Context);
     let { length, cost_in_credits, crew, passengers, hyperdrive_rating, MGLT } = ship;
