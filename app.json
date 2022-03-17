@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AwesomeProject",
-    "slug": "AwesomeProject",
+    "name": "Star Wars Starship Databank",
+    "slug": "star-wars-starship-databank",
     "version": "1.0.0",
     "icon": "./assets/icons/icon.png",
     "splash": {
@@ -25,7 +25,9 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/icons/favicon.png"
+    },
+    "description": "A React Native app where you can discover Star Wars starships and save your favorites",
+    "githubUrl": "https://github.com/victor-grajski/star-wars-starship-databank"
   }
 }

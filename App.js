@@ -126,9 +126,9 @@ export default function App() {
   };
 
 
-  if (!isLoaded) {
-    return <AppLoading />;
-  }
+  // if (!isLoaded) {
+  //   return <AppLoading />;
+  // }
   return (
     <NavigationContainer>
       <StatusBar style="light" />
