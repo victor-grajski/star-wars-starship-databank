@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from '@use-expo/font';
-import { AppLoading } from 'expo';
+import { loadAsync } from 'expo-font';
+import AppLoading from 'expo-app-loading';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -39,10 +40,14 @@ export default function App() {
 
   const [drawerActive, setDrawerActive] = useState(false);
 
-  const [isLoaded] = useFonts({
-    'Helvetica Neue': require('./assets/fonts/HelveticaNeue.ttf'),
-    'Star Wars': require('./assets/fonts/Starjedi.ttf'),
-  });
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const loadFonts = () => {
+    return loadAsync({
+      'Helvetica Neue': require('./assets/fonts/HelveticaNeue.ttf'),
+      'Star Wars': require('./assets/fonts/Starjedi.ttf'),
+    })
+  }
 
   const orientation = useOrientation();
   const Stack = createStackNavigator();
@@ -126,9 +131,15 @@ export default function App() {
   };
 
 
-  // if (!isLoaded) {
-  //   return <AppLoading />;
-  // }
+  if (!isLoaded) {
+    return (
+      <AppLoading
+        startAsync={loadFonts}
+        onFinish={() => setIsLoaded(true)}
+        onError={console.warn}
+      />
+    );
+  }
   return (
     <NavigationContainer>
       <StatusBar style="light" />
