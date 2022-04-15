@@ -19,7 +19,7 @@
 7. Filter favorites
 
 # Key Code Samples
-## `App.js`
+## [`App.js`](https://github.com/victor-grajski/star-wars-starship-databank/blob/main/App.js)
 ```
   const filterResults = id => {
     let title;
@@ -44,7 +44,7 @@
   };
   ```
   
-  ## `components/HomeScreen.js`
+  ## [`components/HomeScreen/HomeScreen.js`](https://github.com/victor-grajski/star-wars-starship-databank/blob/main/components/HomeScreen/HomeScreen.js)
   ```
   const getStyles = (orientation) => {
     if (orientation === 'PORTRAIT') {
@@ -97,3 +97,81 @@
     }
   }
   ```
+  
+  ## [`components/StarshipDetail/StarshipDetail.js`](https://github.com/victor-grajski/star-wars-starship-databank/blob/main/components/StarshipDetail/StarshipDetail.js)
+  ```
+  export default function StarshipDetail({ route, navigation }) {
+    const { orientation } = useContext(Context);
+    let ship = route.params.ship;
+    let { images, pilots } = ship;
+    let image = Image.resolveAssetSource(images[0]);
+    let styles = getStyles(orientation);
+
+    React.useLayoutEffect(() => {
+      navigation.setOptions({
+        headerRight: () => (
+          <DetailHeartButton ship={ship} />
+        ),
+      });
+    }, [navigation]);
+    
+    return (
+        <View style={styles.main}>
+          {orientation === "PORTRAIT" ? (
+            <ScrollView
+              style={styles.container}
+              contentContainerStyle={styles.contentContainer}
+            >
+              <Image source={image} style={styles.image}/> 
+              <Text style={styles.title}>{ship.name}</Text>
+              <Text style={styles.subtitle}>{ship.manufacturer}</Text>
+              <Text style={styles.subtitle}>{ship.starship_class}</Text>
+
+              {ship.description ? (
+                <Text style={styles.description}>{ship.description}</Text>
+              ) : (
+                <></>
+              )}
+              
+
+              <Stats ship={ship} />
+
+              {pilots.length >= 1 ? (
+                <Pilots ship={ship} />
+              ) : (
+                <></>
+              )}
+              
+              <Films ship={ship} />
+            </ScrollView>
+          ) : (
+            <View style={styles.container}>
+              <View style={styles.containerLeft}>
+                <Image source={image} style={styles.image}/>
+                <Text style={styles.description}>{ship.description}</Text>
+              </View>
+              <ScrollView
+                style={styles.containerRight}
+                contentContainerStyle={styles.contentContainer}
+              >
+                <Text style={styles.title}>{ship.name}</Text>
+                <Text style={styles.subtitle}>{ship.manufacturer}</Text>
+                <Text style={styles.subtitle}>{ship.starship_class}</Text> 
+
+                <Stats ship={ship} />
+                
+                {pilots.length >= 1 ? (
+                  <Pilots ship={ship} />
+                ) : (
+                  <></>
+                )}
+
+                <Films ship={ship} />
+              </ScrollView>
+            </View>
+          )}
+          
+        </View>
+    );
+};
+```
