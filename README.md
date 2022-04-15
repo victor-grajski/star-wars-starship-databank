@@ -12,8 +12,8 @@
 # Test User Flow
 1. Scroll through list on home page
 2. Open hamburger menu
-3. Filter by Episode V: The Empire Strikes Back
-4. Tap on Slave 1
+3. Filter by `Episode V: The Empire Strikes Back`
+4. Tap on `Slave 1`
 5. Add as a favorite
 6. Go back to home page
 7. Filter favorites
